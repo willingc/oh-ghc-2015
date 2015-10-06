@@ -40,6 +40,9 @@ Private google docs
 - Schedule
 - Contacts
 
+### GHC Links
+- [Conference schedule](http://schedule.gracehopper.org/)
+
 ### Nikola
 - IRC: #nikola on Freenode
 - [Nikola Website](https://getnikola.org) 

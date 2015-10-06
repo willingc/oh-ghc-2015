@@ -32,10 +32,15 @@ Private google docs
 ### Projects
 - OpenHatch
 - Systers VMS Volunteer Management System
-- Open Source Day 2015 Inspire Others Site
+- Open Source Day 2015 Inspire Others Site (Similar to this site using Nikola)
 - Your favorite open source project (note: mentors may not be as experienced or able to commit
   your contribution on these projects)
   
 ## GHC Official Open Source Day Documentation
 - Schedule
 - Contacts
+
+### Nikola
+- IRC: #nikola on Freenode
+- [Nikola Website](https://getnikola.org) 
+- [Nikola GitHub repository](https://github.com/getnikola/nikola)

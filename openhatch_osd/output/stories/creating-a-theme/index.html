@@ -182,55 +182,55 @@ $ echo base &gt; themes/lanyon/parent
 <h2>Basic CSS</h2>
 <p>The next step is to know exactly how Lanyon’s pages work. To do this, we read its HTML.
 First let’s look at the head element:</p>
-<pre class="code html"><a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-2"></a><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span> <span class="na">xml:lang=</span><span class="s">"en"</span> <span class="na">lang=</span><span class="s">"en-us"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-3"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-4"></a><span class="nt">&lt;head&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-5"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://gmpg.org/xfn/11"</span> <span class="na">rel=</span><span class="s">"profile"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-6"></a><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"content-type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-7"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-8"></a><span class="c">&lt;!-- Enable responsiveness on mobile devices--&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-9"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, maximum-scale=1"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-10"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-11"></a><span class="nt">&lt;title&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-12"></a>    Lanyon <span class="ni">&amp;middot;</span> A Jekyll theme
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-13"></a><span class="nt">&lt;/title&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-14"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-15"></a><span class="c">&lt;!-- CSS --&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-16"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/poole.css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-17"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/syntax.css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-18"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/lanyon.css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-19"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-20"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-21"></a><span class="c">&lt;!-- Icons --&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-22"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon-precomposed"</span> <span class="na">sizes=</span><span class="s">"144x144"</span> <span class="na">href=</span><span class="s">"/public/apple-touch-icon-144-precomposed.thumbnail.png"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-23"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"/public/favicon.ico"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-24"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-25"></a><span class="c">&lt;!-- RSS --&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-26"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="na">title=</span><span class="s">"RSS"</span> <span class="na">href=</span><span class="s">"/atom.xml"</span><span class="nt">&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-27"></a>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-28"></a><span class="c">&lt;!-- Google Analytics --&gt;</span>
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-29"></a>[...]
-<a name="rest_code_e6e3a3264ee44bdea5d856c62be77e03-30"></a><span class="nt">&lt;/head&gt;</span>
+<pre class="code html"><a name="rest_code_5ed2dc26d30045ac990b73de3180703a-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-2"></a><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span> <span class="na">xml:lang=</span><span class="s">"en"</span> <span class="na">lang=</span><span class="s">"en-us"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-3"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-4"></a><span class="nt">&lt;head&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-5"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://gmpg.org/xfn/11"</span> <span class="na">rel=</span><span class="s">"profile"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-6"></a><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"content-type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-7"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-8"></a><span class="c">&lt;!-- Enable responsiveness on mobile devices--&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-9"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, maximum-scale=1"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-10"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-11"></a><span class="nt">&lt;title&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-12"></a>    Lanyon <span class="ni">&amp;middot;</span> A Jekyll theme
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-13"></a><span class="nt">&lt;/title&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-14"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-15"></a><span class="c">&lt;!-- CSS --&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-16"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/poole.css"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-17"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/syntax.css"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-18"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/public/css/lanyon.css"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-19"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-20"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-21"></a><span class="c">&lt;!-- Icons --&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-22"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon-precomposed"</span> <span class="na">sizes=</span><span class="s">"144x144"</span> <span class="na">href=</span><span class="s">"/public/apple-touch-icon-144-precomposed.thumbnail.png"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-23"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"/public/favicon.ico"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-24"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-25"></a><span class="c">&lt;!-- RSS --&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-26"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="na">title=</span><span class="s">"RSS"</span> <span class="na">href=</span><span class="s">"/atom.xml"</span><span class="nt">&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-27"></a>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-28"></a><span class="c">&lt;!-- Google Analytics --&gt;</span>
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-29"></a>[...]
+<a name="rest_code_5ed2dc26d30045ac990b73de3180703a-30"></a><span class="nt">&lt;/head&gt;</span>
 </pre>
 <p>The interesting part there is that it loads a few CSS files. If you check the source of your Nikola site, you will
 see something fairly similar:</p>
-<pre class="code html"><a name="rest_code_d43c5b97962e437486e9d23c7200dd23-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-2"></a><span class="nt">&lt;html</span> <span class="na">prefix=</span><span class="s">"og: http://ogp.me/ns# article: http://ogp.me/ns/article# "</span> <span class="na">vocab=</span><span class="s">"http://ogp.me/ns"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-3"></a><span class="nt">&lt;head&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-4"></a><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-5"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"This is a demo site for Nikola."</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-6"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-7"></a><span class="nt">&lt;title&gt;</span>My Nikola Site | My Nikola Site<span class="nt">&lt;/title&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-8"></a>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-9"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-10"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-11"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/theme.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-12"></a>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-13"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="na">title=</span><span class="s">"RSS"</span> <span class="na">href=</span><span class="s">"rss.xml"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-14"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"https://example.com/index.html"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-15"></a><span class="c">&lt;!--[if lt IE 9]&gt;&lt;script src="assets/js/html5.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;</span><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"prefetch"</span> <span class="na">href=</span><span class="s">"posts/welcome-to-nikola.html"</span> <span class="na">type=</span><span class="s">"text/html"</span><span class="nt">&gt;</span>
-<a name="rest_code_d43c5b97962e437486e9d23c7200dd23-16"></a><span class="nt">&lt;/head&gt;</span>
+<pre class="code html"><a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-2"></a><span class="nt">&lt;html</span> <span class="na">prefix=</span><span class="s">"og: http://ogp.me/ns# article: http://ogp.me/ns/article# "</span> <span class="na">vocab=</span><span class="s">"http://ogp.me/ns"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-3"></a><span class="nt">&lt;head&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-4"></a><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-5"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"This is a demo site for Nikola."</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-6"></a><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-7"></a><span class="nt">&lt;title&gt;</span>My Nikola Site | My Nikola Site<span class="nt">&lt;/title&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-8"></a>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-9"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-10"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-11"></a><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/css/theme.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-12"></a>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-13"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="na">title=</span><span class="s">"RSS"</span> <span class="na">href=</span><span class="s">"rss.xml"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-14"></a><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"https://example.com/index.html"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-15"></a><span class="c">&lt;!--[if lt IE 9]&gt;&lt;script src="assets/js/html5.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;</span><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"prefetch"</span> <span class="na">href=</span><span class="s">"posts/welcome-to-nikola.html"</span> <span class="na">type=</span><span class="s">"text/html"</span><span class="nt">&gt;</span>
+<a name="rest_code_e08ff09bd0154242aecf810aa9adbabb-16"></a><span class="nt">&lt;/head&gt;</span>
 </pre>
 <p>Luckily, since this is all under a very liberal license, we can just copy these CSS files into
 Nikola, adapting the paths a little so that they follow our conventions:</p>
@@ -257,46 +257,46 @@ $ mkdir themes/lanyon/templates
 $ curl https://raw.githubusercontent.com/getnikola/nikola/master/nikola/data/themes/base/templates/base_helper.tmpl &gt; themes/lanyon/templates/base_helper.tmpl
 </pre>
 <p>The part we want to change is this:</p>
-<pre class="code html+mako"><a name="rest_code_e0e69424a0be435193d96cb664e99d8b-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_stylesheets()"</span><span class="cp">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-2"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">use_bundles</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-3"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">use_cdn</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-4"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-5"></a>        <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-6"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all-nocdn.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-7"></a>        <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-8"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-9"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-10"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-11"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/theme.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-12"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">has_custom_css</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-13"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/custom.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-14"></a>        <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-15"></a>    <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-16"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">needs_ipython_css</span><span class="p">:</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-17"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/ipython.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-18"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/nikola_ipython.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-19"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_e0e69424a0be435193d96cb664e99d8b-20"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_04a05423e4c9409484c9399fc68c8129-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_stylesheets()"</span><span class="cp">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-2"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">use_bundles</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-3"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">use_cdn</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-4"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-5"></a>        <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-6"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all-nocdn.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-7"></a>        <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-8"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-9"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-10"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-11"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/theme.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-12"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">has_custom_css</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-13"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/custom.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-14"></a>        <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-15"></a>    <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-16"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">needs_ipython_css</span><span class="p">:</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-17"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/ipython.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-18"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/nikola_ipython.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-19"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_04a05423e4c9409484c9399fc68c8129-20"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
 </pre>
 <p>And we will change it so it uses the lanyon styles instead of theme.css (again, ignore the bundles for now!):</p>
-<pre class="code html+mako"><a name="rest_code_382189649e6c43beb3b260edb876885d-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_stylesheets()"</span><span class="cp">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-2"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">use_bundles</span><span class="p">:</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-3"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-4"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-5"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-6"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/poole.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-7"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/lanyon.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-8"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-9"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">has_custom_css</span><span class="p">:</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-10"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/custom.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-11"></a>        <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-12"></a>    <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-13"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">needs_ipython_css</span><span class="p">:</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-14"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/ipython.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-15"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/nikola_ipython.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-16"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-17"></a>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"</span><span class="nt">&gt;</span>
-<a name="rest_code_382189649e6c43beb3b260edb876885d-18"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_stylesheets()"</span><span class="cp">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-2"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">use_bundles</span><span class="p">:</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-3"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/all.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-4"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-5"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/rst.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-6"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/poole.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-7"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/lanyon.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-8"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/code.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-9"></a>        <span class="cp">%</span><span class="k">if</span> <span class="n">has_custom_css</span><span class="p">:</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-10"></a>            <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/custom.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-11"></a>        <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-12"></a>    <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-13"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">needs_ipython_css</span><span class="p">:</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-14"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/ipython.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-15"></a>        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/css/nikola_ipython.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-16"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-17"></a>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"</span><span class="nt">&gt;</span>
+<a name="rest_code_1959133f0c614a68bfa10a27ce75d8b3-18"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
 </pre>
 <div class="figure">
 <a class="reference external image-reference" href="https://getnikola.com/images/lanyon-1.png"><img alt="https://getnikola.com/images/lanyon-1.thumbnail.png" src="https://getnikola.com/images/lanyon-1.thumbnail.png"></a>
@@ -307,111 +307,111 @@ $ curl https://raw.githubusercontent.com/getnikola/nikola/master/nikola/data/the
 <h2>Page Layout</h2>
 <p>This is trickier but should be no problem for people with a basic understanding of HTML and a desire to make a theme!</p>
 <p>Lanyon’s content is split in two parts: a sidebar and the rest. The sidebar looks like this (shortened for comprehension):</p>
-<pre class="code html"><a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-1"></a><span class="nt">&lt;body&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-2"></a><span class="c">&lt;!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-3"></a><span class="c">     styles, `#sidebar-checkbox` for behavior. --&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-4"></a><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-checkbox"</span> <span class="na">id=</span><span class="s">"sidebar-checkbox"</span><span class="nt">&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-5"></a>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-6"></a><span class="c">&lt;!-- Toggleable sidebar --&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-7"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar"</span> <span class="na">id=</span><span class="s">"sidebar"</span><span class="nt">&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-8"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar-item"</span><span class="nt">&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-9"></a>        <span class="nt">&lt;p&gt;</span>A reserved <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://jekyllrb.com"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/a&gt;</span> theme that places the utmost gravity on content with a hidden drawer. Made by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/mdo"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@mdo<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-10"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-11"></a>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-12"></a>    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"sidebar-nav"</span><span class="nt">&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-13"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item active"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-14"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item"</span> <span class="na">href=</span><span class="s">"/about/"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-15"></a>        [...]
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-16"></a>    <span class="nt">&lt;/nav&gt;</span>
-<a name="rest_code_edd56f8c3d1149caa0f290030aaac8b1-17"></a><span class="nt">&lt;/div&gt;</span>
+<pre class="code html"><a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-1"></a><span class="nt">&lt;body&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-2"></a><span class="c">&lt;!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-3"></a><span class="c">     styles, `#sidebar-checkbox` for behavior. --&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-4"></a><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-checkbox"</span> <span class="na">id=</span><span class="s">"sidebar-checkbox"</span><span class="nt">&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-5"></a>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-6"></a><span class="c">&lt;!-- Toggleable sidebar --&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-7"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar"</span> <span class="na">id=</span><span class="s">"sidebar"</span><span class="nt">&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-8"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar-item"</span><span class="nt">&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-9"></a>        <span class="nt">&lt;p&gt;</span>A reserved <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://jekyllrb.com"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/a&gt;</span> theme that places the utmost gravity on content with a hidden drawer. Made by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/mdo"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@mdo<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-10"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-11"></a>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-12"></a>    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"sidebar-nav"</span><span class="nt">&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-13"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item active"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-14"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item"</span> <span class="na">href=</span><span class="s">"/about/"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-15"></a>        [...]
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-16"></a>    <span class="nt">&lt;/nav&gt;</span>
+<a name="rest_code_862e889bdfaf4ff7995509a61bddefe4-17"></a><span class="nt">&lt;/div&gt;</span>
 </pre>
 <p>So, a plain body, with an input element that controls the sidebar, a div which is the sidebar itself.
 Inside that, div.sidebar-item for items, and a nav with "navigational links". This is followed by the "masthead" and
 the content itself, which we will look at in a bit.</p>
 <p>If we look for the equivalent code in Nikola’s side, we see this:</p>
-<pre class="code html"><a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-1"></a><span class="nt">&lt;body&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-2"></a><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-3"></a><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-4"></a><span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-5"></a><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"brand"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://example.com/"</span> <span class="na">title=</span><span class="s">"My Nikola Site"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span> <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"blog-title"</span><span class="nt">&gt;</span>My Nikola Site<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-6"></a><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"menu"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;&lt;ul&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-7"></a><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../archive.html"</span><span class="nt">&gt;</span>Archive<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-8"></a>                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../categories/index.html"</span><span class="nt">&gt;</span>Tags<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<a name="rest_code_36e754be9cd5459ba645b9ec81bfc001-9"></a>                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../rss.xml"</span><span class="nt">&gt;</span>RSS feed<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<pre class="code html"><a name="rest_code_90966653601b465b8c176039f024ec64-1"></a><span class="nt">&lt;body&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-2"></a><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-3"></a><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-4"></a><span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-5"></a><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"brand"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://example.com/"</span> <span class="na">title=</span><span class="s">"My Nikola Site"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span> <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"blog-title"</span><span class="nt">&gt;</span>My Nikola Site<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-6"></a><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"menu"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;&lt;ul&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-7"></a><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../archive.html"</span><span class="nt">&gt;</span>Archive<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-8"></a>                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../categories/index.html"</span><span class="nt">&gt;</span>Tags<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<a name="rest_code_90966653601b465b8c176039f024ec64-9"></a>                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"../rss.xml"</span><span class="nt">&gt;</span>RSS feed<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
 </pre>
 <p>So Nikola has the "masthead" above the nav element, and uses list elements in nav instead of bare links.
 Not all that different is it?</p>
 <p>Let’s make it lanyon-like! We will need 2 more templates: <a class="reference external" href="https://github.com/getnikola/nikola/blob/master/nikola/data/themes/base/templates/base.tmpl">base.tmpl</a> and <a class="reference external" href="https://github.com/getnikola/nikola/blob/master/nikola/data/themes/base/templates/base_header.tmpl">base_header.tmpl</a>. Get them and put them in your <tt class="docutils literal">themes/lanyon/templates</tt> folder.</p>
 <p>Let’s look at <tt class="docutils literal">base.tmpl</tt> first. It’s short and nice, it looks like a webpage without
 all the interesting stuff:</p>
-<pre class="code html+mako"><a name="rest_code_bcc630cfc91041b297c2275dee713a0d-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"base"</span> <span class="na">file=</span><span class="s">"base_helper.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"header"</span> <span class="na">file=</span><span class="s">"base_header.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-4"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"footer"</span> <span class="na">file=</span><span class="s">"base_footer.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-5"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"annotations"</span> <span class="na">file=</span><span class="s">"annotation_helper.tmpl"</span><span class="cp">/&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-6"></a><span class="cp">${</span><span class="n">set_locale</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-7"></a><span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">html_headstart</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-8"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-9"></a><span class="cp">### Leave this block alone.</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-10"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-11"></a><span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-12"></a><span class="nt">&lt;/head&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-13"></a><span class="nt">&lt;body&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-14"></a><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">messages</span><span class="p">(</span><span class="s">"Skip to main content"</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-15"></a>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-16"></a>        <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_header</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-17"></a>        <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-18"></a>            <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-19"></a>        <span class="nt">&lt;/main&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-20"></a>        <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-21"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-22"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-23"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-24"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-25"></a><span class="nt">&lt;/body&gt;</span>
-<a name="rest_code_bcc630cfc91041b297c2275dee713a0d-26"></a><span class="nt">&lt;/html&gt;</span>
+<pre class="code html+mako"><a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"base"</span> <span class="na">file=</span><span class="s">"base_helper.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"header"</span> <span class="na">file=</span><span class="s">"base_header.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-4"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"footer"</span> <span class="na">file=</span><span class="s">"base_footer.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-5"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"annotations"</span> <span class="na">file=</span><span class="s">"annotation_helper.tmpl"</span><span class="cp">/&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-6"></a><span class="cp">${</span><span class="n">set_locale</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-7"></a><span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">html_headstart</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-8"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-9"></a><span class="cp">### Leave this block alone.</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-10"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-11"></a><span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-12"></a><span class="nt">&lt;/head&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-13"></a><span class="nt">&lt;body&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-14"></a><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">messages</span><span class="p">(</span><span class="s">"Skip to main content"</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-15"></a>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-16"></a>        <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_header</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-17"></a>        <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-18"></a>            <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-19"></a>        <span class="nt">&lt;/main&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-20"></a>        <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-21"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-22"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-23"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-24"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-25"></a><span class="nt">&lt;/body&gt;</span>
+<a name="rest_code_c3afaa389fbb4037941c68bc445e96e6-26"></a><span class="nt">&lt;/html&gt;</span>
 </pre>
 <p>That link which says "Skip to main content" is very important for accessibility, so we will leave it in
 place. But below, you can see how it creates the "container" div we see in the Nikola page, and the content is
 created by <tt class="docutils literal">html_header()</tt> which is defined in <tt class="docutils literal">base_header.tmpl</tt> The actual <tt class="docutils literal">nav</tt> element is done
 by the <tt class="docutils literal">html_navigation_links</tt> function out of the <tt class="docutils literal">NAVIGATION_LINKS</tt> option.</p>
 <p>So, first, lets change that base template to be more lanyon-like:</p>
-<pre class="code html+mako"><a name="rest_code_48f313140ecd42c1acef6a68b19f382a-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"base"</span> <span class="na">file=</span><span class="s">"base_helper.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"header"</span> <span class="na">file=</span><span class="s">"base_header.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-4"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"footer"</span> <span class="na">file=</span><span class="s">"base_footer.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-5"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"annotations"</span> <span class="na">file=</span><span class="s">"annotation_helper.tmpl"</span><span class="cp">/&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-6"></a><span class="cp">${</span><span class="n">set_locale</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-7"></a><span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">html_headstart</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-8"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-9"></a><span class="cp">### Leave this block alone.</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-10"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-11"></a><span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-12"></a><span class="nt">&lt;/head&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-13"></a><span class="nt">&lt;body&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-14"></a>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">messages</span><span class="p">(</span><span class="s">"Skip to main content"</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-15"></a>    <span class="c">&lt;!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-16"></a><span class="c">            styles, `#sidebar-checkbox` for behavior. --&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-17"></a>    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-checkbox"</span> <span class="na">id=</span><span class="s">"sidebar-checkbox"</span><span class="nt">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-18"></a>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-19"></a>    <span class="c">&lt;!-- Toggleable sidebar --&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-20"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar"</span> <span class="na">id=</span><span class="s">"sidebar"</span><span class="nt">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-21"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar-item"</span><span class="nt">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-22"></a>            <span class="nt">&lt;p&gt;</span>A reserved <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://getnikola.com"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Nikola<span class="nt">&lt;/a&gt;</span> theme that places the utmost gravity on content with a hidden drawer. Made by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/mdo"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@mdo<span class="nt">&lt;/a&gt;</span> for Jekyll,
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-23"></a>            ported to Nikola by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/ralsina"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@ralsina<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-24"></a>        <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-25"></a>        <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_navigation_links</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-26"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-27"></a>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-28"></a>    <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-29"></a>        <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-30"></a>    <span class="nt">&lt;/main&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-31"></a>    <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-32"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-33"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-34"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-35"></a><span class="nt">&lt;/body&gt;</span>
-<a name="rest_code_48f313140ecd42c1acef6a68b19f382a-36"></a><span class="nt">&lt;/html&gt;</span>
+<pre class="code html+mako"><a name="rest_code_21c3875471134ef89208660942fdd9b9-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"base"</span> <span class="na">file=</span><span class="s">"base_helper.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"header"</span> <span class="na">file=</span><span class="s">"base_header.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-4"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"footer"</span> <span class="na">file=</span><span class="s">"base_footer.tmpl"</span> <span class="na">import=</span><span class="s">"*"</span><span class="cp">/&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-5"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"annotations"</span> <span class="na">file=</span><span class="s">"annotation_helper.tmpl"</span><span class="cp">/&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-6"></a><span class="cp">${</span><span class="n">set_locale</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-7"></a><span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">html_headstart</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-8"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-9"></a><span class="cp">### Leave this block alone.</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-10"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-11"></a><span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-12"></a><span class="nt">&lt;/head&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-13"></a><span class="nt">&lt;body&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-14"></a>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">messages</span><span class="p">(</span><span class="s">"Skip to main content"</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-15"></a>    <span class="c">&lt;!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-16"></a><span class="c">            styles, `#sidebar-checkbox` for behavior. --&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-17"></a>    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-checkbox"</span> <span class="na">id=</span><span class="s">"sidebar-checkbox"</span><span class="nt">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-18"></a>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-19"></a>    <span class="c">&lt;!-- Toggleable sidebar --&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-20"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar"</span> <span class="na">id=</span><span class="s">"sidebar"</span><span class="nt">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-21"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidebar-item"</span><span class="nt">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-22"></a>            <span class="nt">&lt;p&gt;</span>A reserved <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://getnikola.com"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Nikola<span class="nt">&lt;/a&gt;</span> theme that places the utmost gravity on content with a hidden drawer. Made by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/mdo"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@mdo<span class="nt">&lt;/a&gt;</span> for Jekyll,
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-23"></a>            ported to Nikola by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/ralsina"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>@ralsina<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-24"></a>        <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-25"></a>        <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_navigation_links</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-26"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-27"></a>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-28"></a>    <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-29"></a>        <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-30"></a>    <span class="nt">&lt;/main&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-31"></a>    <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-32"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-33"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-34"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-35"></a><span class="nt">&lt;/body&gt;</span>
+<a name="rest_code_21c3875471134ef89208660942fdd9b9-36"></a><span class="nt">&lt;/html&gt;</span>
 </pre>
 <div class="figure">
 <a class="reference external image-reference" href="https://getnikola.com/images/lanyon-2.png"><img alt="https://getnikola.com/images/lanyon-2.thumbnail.png" src="https://getnikola.com/images/lanyon-2.thumbnail.png"></a>
@@ -422,27 +422,27 @@ We are loading <tt class="docutils literal">rst.css</tt> which specifies
 the background color of <tt class="docutils literal">div.sidebar</tt> which is more specific than
 <tt class="docutils literal">lanyon.css</tt>, which specifies for <tt class="docutils literal">.sidebar</tt> alone.</p>
 <p>There are many ways to fix this, I chose to change lanyon.css to also use div.sidebar:</p>
-<pre class="code css"><a name="rest_code_8da178454f254aa494329d534588b96e-1"></a><span class="nt">div</span><span class="nc">.sidebar</span><span class="o">,</span><span class="nc">.sidebar</span> <span class="p">{</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-2"></a>    <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-3"></a>    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-4"></a>    <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-5"></a>    <span class="k">left</span><span class="o">:</span> <span class="m">-14</span><span class="n">rem</span><span class="p">;</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-6"></a>    <span class="k">width</span><span class="o">:</span> <span class="m">14</span><span class="n">rem</span><span class="p">;</span>
-<a name="rest_code_8da178454f254aa494329d534588b96e-7"></a>    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<pre class="code css"><a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-1"></a><span class="nt">div</span><span class="nc">.sidebar</span><span class="o">,</span><span class="nc">.sidebar</span> <span class="p">{</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-2"></a>    <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-3"></a>    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-4"></a>    <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-5"></a>    <span class="k">left</span><span class="o">:</span> <span class="m">-14</span><span class="n">rem</span><span class="p">;</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-6"></a>    <span class="k">width</span><span class="o">:</span> <span class="m">14</span><span class="n">rem</span><span class="p">;</span>
+<a name="rest_code_cc3f0f05bde44ef8ae26f2ce05c1605b-7"></a>    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </pre>
 <p>This is annoying but it will happen when you just grab CSS from different places. The "Inspect Element"
 feature of your web browser is your best friend for these situations.</p>
 <p>Another problem is that the contents of the nav element are wrong. They are not bare links. We will fix that in
 <tt class="docutils literal">base_header.html</tt>, like this:</p>
-<pre class="code html+mako"><a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_navigation_links()"</span><span class="cp">&gt;</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-2"></a>    <span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"menu"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">class=</span><span class="s">"sidebar-nav"</span><span class="nt">&gt;</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-3"></a>    <span class="cp">%</span><span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">navigation_links</span><span class="p">[</span><span class="n">lang</span><span class="p">]:</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-4"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item"</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">url</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">text</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-5"></a>    <span class="cp">%</span><span class="k">endfor</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-6"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'menu'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-7"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'menu_alt'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-8"></a>    <span class="nt">&lt;/nav&gt;</span>
-<a name="rest_code_d6c8ee06a0fd496b9d53467158376a9c-9"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_5b3be5c755074920959f62ecad0d728d-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_navigation_links()"</span><span class="cp">&gt;</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-2"></a>    <span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"menu"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">class=</span><span class="s">"sidebar-nav"</span><span class="nt">&gt;</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-3"></a>    <span class="cp">%</span><span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">navigation_links</span><span class="p">[</span><span class="n">lang</span><span class="p">]:</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-4"></a>        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sidebar-nav-item"</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">url</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">text</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-5"></a>    <span class="cp">%</span><span class="k">endfor</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-6"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'menu'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-7"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'menu_alt'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-8"></a>    <span class="nt">&lt;/nav&gt;</span>
+<a name="rest_code_5b3be5c755074920959f62ecad0d728d-9"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
 </pre>
 <p><strong>Note: this means this theme will not support submenus in navigation. If you want that, I’ll happily take a patch.</strong></p>
 <div class="figure">
@@ -450,56 +450,56 @@ feature of your web browser is your best friend for these situations.</p>
 <p class="caption">Starting to see a resemblance?</p>
 </div>
 <p>Now let’s look at the content. In Lanyon, this is how the "main" content looks:</p>
-<pre class="code html"><a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-1"></a><span class="c">&lt;!-- Wrap is the content to shift when toggling the sidebar. We wrap the</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-2"></a><span class="c">     content to avoid any CSS collisions with our real content. --&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-3"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-4"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-5"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-6"></a>      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-7"></a>        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-8"></a>        <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-9"></a>      <span class="nt">&lt;/h3&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-10"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-11"></a>  <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-12"></a>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-13"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container content"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-14"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post"</span><span class="nt">&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-15"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>Introducing Lanyon<span class="nt">&lt;/h1&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-16"></a>        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-date"</span><span class="nt">&gt;</span>02 Jan 2014<span class="nt">&lt;/span&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-17"></a>        <span class="nt">&lt;p&gt;</span>Lanyon is an unassuming <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://jekyllrb.com"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/a&gt;</span> theme [...]
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-18"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-19"></a>  <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-20"></a><span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-21"></a><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"sidebar-checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-toggle"</span><span class="nt">&gt;&lt;/label&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-22"></a><span class="nt">&lt;/body&gt;</span>
-<a name="rest_code_4a54d77e376c479c8017ce1da2b2ff0b-23"></a><span class="nt">&lt;/html&gt;</span>
+<pre class="code html"><a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-1"></a><span class="c">&lt;!-- Wrap is the content to shift when toggling the sidebar. We wrap the</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-2"></a><span class="c">     content to avoid any CSS collisions with our real content. --&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-3"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-4"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-5"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-6"></a>      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-7"></a>        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-8"></a>        <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-9"></a>      <span class="nt">&lt;/h3&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-10"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-11"></a>  <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-12"></a>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-13"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container content"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-14"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-15"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>Introducing Lanyon<span class="nt">&lt;/h1&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-16"></a>        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-date"</span><span class="nt">&gt;</span>02 Jan 2014<span class="nt">&lt;/span&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-17"></a>        <span class="nt">&lt;p&gt;</span>Lanyon is an unassuming <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://jekyllrb.com"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/a&gt;</span> theme [...]
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-18"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-19"></a>  <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-20"></a><span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-21"></a><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"sidebar-checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-toggle"</span><span class="nt">&gt;&lt;/label&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-22"></a><span class="nt">&lt;/body&gt;</span>
+<a name="rest_code_25f5e6ce1d4a4d7eacc716906b9d3749-23"></a><span class="nt">&lt;/html&gt;</span>
 </pre>
 <p>Everything inside the "container content" div is… the content. The rest is a masthead with the site title
 and at the bottom a label for the sidebar toggle. Easy to do in <tt class="docutils literal">base.tmpl</tt>
 (only showing the relevant part):</p>
-<pre class="code html+mako"><a name="rest_code_e073d31aebff4343803ff542a721efcc-1"></a>    <span class="c">&lt;!-- Wrap is the content to shift when toggling the sidebar. We wrap the</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-2"></a><span class="c">        content to avoid any CSS collisions with our real content. --&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-3"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-4"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-5"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-6"></a>        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-7"></a>            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-8"></a>            <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-9"></a>        <span class="nt">&lt;/h3&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-10"></a>        <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-11"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-12"></a>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-13"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container content"</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-14"></a>        <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-15"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-16"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-17"></a>    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"sidebar-checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-toggle"</span><span class="nt">&gt;&lt;/label&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-18"></a>    <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-19"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-20"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-21"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-22"></a><span class="nt">&lt;/body&gt;</span>
-<a name="rest_code_e073d31aebff4343803ff542a721efcc-23"></a><span class="nt">&lt;/html&gt;</span>
+<pre class="code html+mako"><a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-1"></a>    <span class="c">&lt;!-- Wrap is the content to shift when toggling the sidebar. We wrap the</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-2"></a><span class="c">        content to avoid any CSS collisions with our real content. --&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-3"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-4"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-5"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-6"></a>        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-7"></a>            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-8"></a>            <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-9"></a>        <span class="nt">&lt;/h3&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-10"></a>        <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-11"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-12"></a>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-13"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container content"</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-14"></a>        <span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-15"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-16"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-17"></a>    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"sidebar-checkbox"</span> <span class="na">class=</span><span class="s">"sidebar-toggle"</span><span class="nt">&gt;&lt;/label&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-18"></a>    <span class="cp">${</span><span class="n">footer</span><span class="o">.</span><span class="n">html_footer</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-19"></a>    <span class="cp">${</span><span class="n">body_end</span><span class="cp">}</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-20"></a>    <span class="cp">${</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'body_end'</span><span class="p">]()</span><span class="cp">}</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-21"></a>    <span class="cp">${</span><span class="n">base</span><span class="o">.</span><span class="n">late_load_js</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-22"></a><span class="nt">&lt;/body&gt;</span>
+<a name="rest_code_0f3f43f949324434a3b60d9bb0d5f81e-23"></a><span class="nt">&lt;/html&gt;</span>
 </pre>
 <div class="figure">
 <a class="reference external image-reference" href="https://getnikola.com/images/lanyon-4.png"><img alt="https://getnikola.com/images/lanyon-4.thumbnail.png" src="https://getnikola.com/images/lanyon-4.thumbnail.png"></a>
@@ -507,81 +507,81 @@ and at the bottom a label for the sidebar toggle. Easy to do in <tt class="docut
 </div>
 <p>The sidebar looks bad because of yet more CSS conflicts with <tt class="docutils literal">rst.css</tt>. By
 adding some extra styling in <tt class="docutils literal">lanyon.css</tt>, it will look better.</p>
-<pre class="code css"><a name="rest_code_f3b8dbf626ec49ae971074b778f67755-1"></a><span class="c">/* Style and "hide" the sidebar */</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-2"></a><span class="nt">div</span><span class="nc">.sidebar</span><span class="o">,</span> <span class="nc">.sidebar</span> <span class="p">{</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-3"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-4"></a>  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-5"></a>  <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-6"></a>  <span class="k">left</span><span class="o">:</span> <span class="m">-14</span><span class="n">rem</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-7"></a>  <span class="k">width</span><span class="o">:</span> <span class="m">14</span><span class="n">rem</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-8"></a>  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-9"></a>  <span class="k">overflow-y</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-10"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-11"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-12"></a>  <span class="k">border</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-13"></a>  <span class="k">font-family</span><span class="o">:</span> <span class="s2">"PT Sans"</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-14"></a>  <span class="k">font-size</span><span class="o">:</span> <span class="o">.</span><span class="m">875</span><span class="n">rem</span><span class="p">;</span> <span class="c">/* 15px */</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-15"></a>  <span class="k">color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,.</span><span class="m">6</span><span class="p">);</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-16"></a>  <span class="k">background-color</span><span class="o">:</span> <span class="m">#202020</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-17"></a>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-18"></a>          <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
-<a name="rest_code_f3b8dbf626ec49ae971074b778f67755-19"></a><span class="p">}</span>
+<pre class="code css"><a name="rest_code_f26ebe99845744219e6d3694ab43941a-1"></a><span class="c">/* Style and "hide" the sidebar */</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-2"></a><span class="nt">div</span><span class="nc">.sidebar</span><span class="o">,</span> <span class="nc">.sidebar</span> <span class="p">{</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-3"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-4"></a>  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-5"></a>  <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-6"></a>  <span class="k">left</span><span class="o">:</span> <span class="m">-14</span><span class="n">rem</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-7"></a>  <span class="k">width</span><span class="o">:</span> <span class="m">14</span><span class="n">rem</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-8"></a>  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-9"></a>  <span class="k">overflow-y</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-10"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-11"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-12"></a>  <span class="k">border</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-13"></a>  <span class="k">font-family</span><span class="o">:</span> <span class="s2">"PT Sans"</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-14"></a>  <span class="k">font-size</span><span class="o">:</span> <span class="o">.</span><span class="m">875</span><span class="n">rem</span><span class="p">;</span> <span class="c">/* 15px */</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-15"></a>  <span class="k">color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,.</span><span class="m">6</span><span class="p">);</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-16"></a>  <span class="k">background-color</span><span class="o">:</span> <span class="m">#202020</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-17"></a>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-18"></a>          <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+<a name="rest_code_f26ebe99845744219e6d3694ab43941a-19"></a><span class="p">}</span>
 </pre>
 <p>Also, the accessibility link on top is visible when it should not. That’s
 because we removed <tt class="docutils literal">theme.css</tt> from the base theme, and with it, we lost a
 couple of classes. We can add them in <tt class="docutils literal">lanyon.css</tt>, along with others used by other
 pieces of the site:</p>
-<pre class="code css"><a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-1"></a><span class="nc">.sr-only</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-2"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-3"></a>  <span class="k">width</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-4"></a>  <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-5"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-6"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">-1px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-7"></a>  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-8"></a>  <span class="k">clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="p">);</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-9"></a>  <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-10"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-11"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-12"></a><span class="nc">.sr-only-focusable</span><span class="nd">:active</span><span class="o">,</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-13"></a><span class="nc">.sr-only-focusable</span><span class="nd">:focus</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-14"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">static</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-15"></a>  <span class="k">width</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-16"></a>  <span class="k">height</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-17"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-18"></a>  <span class="k">overflow</span><span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-19"></a>  <span class="k">clip</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-20"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-21"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-22"></a><span class="nc">.breadcrumb</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-23"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span> <span class="m">15px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-24"></a>  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-25"></a>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-26"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-27"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-28"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-29"></a>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-30"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-31"></a>  <span class="k">margin-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-32"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-33"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-34"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:after</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-35"></a>  <span class="k">content</span><span class="o">:</span> <span class="s1">' / '</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-36"></a>  <span class="k">color</span><span class="o">:</span> <span class="m">#888</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-37"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-38"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-39"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:last-of-type:after</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-40"></a>  <span class="k">content</span><span class="o">:</span> <span class="s1">''</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-41"></a>  <span class="k">margin-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-42"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-43"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-44"></a><span class="nc">.thumbnails</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-45"></a>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-46"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-47"></a><span class="p">}</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-48"></a>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-49"></a><span class="nc">.thumbnails</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:last-of-type</span> <span class="p">{</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-50"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<a name="rest_code_962875fc80fa40708e2c21b62e78f2e3-51"></a><span class="p">}</span>
+<pre class="code css"><a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-1"></a><span class="nc">.sr-only</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-2"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-3"></a>  <span class="k">width</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-4"></a>  <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-5"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-6"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">-1px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-7"></a>  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-8"></a>  <span class="k">clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="p">);</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-9"></a>  <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-10"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-11"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-12"></a><span class="nc">.sr-only-focusable</span><span class="nd">:active</span><span class="o">,</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-13"></a><span class="nc">.sr-only-focusable</span><span class="nd">:focus</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-14"></a>  <span class="k">position</span><span class="o">:</span> <span class="k">static</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-15"></a>  <span class="k">width</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-16"></a>  <span class="k">height</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-17"></a>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-18"></a>  <span class="k">overflow</span><span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-19"></a>  <span class="k">clip</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-20"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-21"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-22"></a><span class="nc">.breadcrumb</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-23"></a>  <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span> <span class="m">15px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-24"></a>  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-25"></a>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-26"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-27"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-28"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-29"></a>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-30"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-31"></a>  <span class="k">margin-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-32"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-33"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-34"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:after</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-35"></a>  <span class="k">content</span><span class="o">:</span> <span class="s1">' / '</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-36"></a>  <span class="k">color</span><span class="o">:</span> <span class="m">#888</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-37"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-38"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-39"></a><span class="nc">.breadcrumb</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:last-of-type:after</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-40"></a>  <span class="k">content</span><span class="o">:</span> <span class="s1">''</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-41"></a>  <span class="k">margin-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-42"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-43"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-44"></a><span class="nc">.thumbnails</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-45"></a>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-46"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-47"></a><span class="p">}</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-48"></a>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-49"></a><span class="nc">.thumbnails</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:last-of-type</span> <span class="p">{</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-50"></a>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<a name="rest_code_380f37be8bc04b97a568e03cfa13fa81-51"></a><span class="p">}</span>
 </pre>
 <div class="figure">
 <a class="reference external image-reference" href="https://getnikola.com/images/lanyon-5.png"><img alt="https://getnikola.com/images/lanyon-5.thumbnail.png" src="https://getnikola.com/images/lanyon-5.thumbnail.png"></a>
@@ -591,12 +591,12 @@ pieces of the site:</p>
 theme itself. We don’t do that sort of thing in Nikola, we have settings for
 that. So, let’s use them. There is a <tt class="docutils literal">html_site_title</tt> function in
 <tt class="docutils literal">base_helper.tmpl</tt> which is just the thing. So we change base.tmpl to use it:</p>
-<pre class="code html+mako"><a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-1"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
-<a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-2"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
-<a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-3"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-<a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-4"></a>      <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_site_title</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-5"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_a8355ff1b3fc4716bfab1aaf9796d184-6"></a>  <span class="nt">&lt;/div&gt;</span>
+<pre class="code html+mako"><a name="rest_code_c519485fa0fb49f99f49689e186c2a29-1"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrap"</span><span class="nt">&gt;</span>
+<a name="rest_code_c519485fa0fb49f99f49689e186c2a29-2"></a>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"masthead"</span><span class="nt">&gt;</span>
+<a name="rest_code_c519485fa0fb49f99f49689e186c2a29-3"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<a name="rest_code_c519485fa0fb49f99f49689e186c2a29-4"></a>      <span class="cp">${</span><span class="n">header</span><span class="o">.</span><span class="n">html_site_title</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_c519485fa0fb49f99f49689e186c2a29-5"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_c519485fa0fb49f99f49689e186c2a29-6"></a>  <span class="nt">&lt;/div&gt;</span>
 </pre>
 <p>That’s a <tt class="docutils literal">&lt;h1&gt;</tt> instead of a <tt class="docutils literal">&lt;h3&gt;</tt> like Lanyon does, but hey, it’s the
 right thing to do. If you want to go with an <tt class="docutils literal">&lt;h3&gt;</tt>, just
@@ -609,20 +609,20 @@ rather large thing…</p>
 <p>You can see in the previous screenshot that text still looks quite different in our port: Serif versus Sans-Serif
 content, and the titles have different colors!</p>
 <p>Let’s start with the titles. Here’s how they look in Lanyon:</p>
-<pre class="code html"><a name="rest_code_1c56dd0f57c44c70b12ebb026fee3bf4-1"></a><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
-<a name="rest_code_1c56dd0f57c44c70b12ebb026fee3bf4-2"></a>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_1c56dd0f57c44c70b12ebb026fee3bf4-3"></a>  <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
-<a name="rest_code_1c56dd0f57c44c70b12ebb026fee3bf4-4"></a><span class="nt">&lt;/h3&gt;</span>
+<pre class="code html"><a name="rest_code_8c1b54df623b4d0caa7ebad6d0654815-1"></a><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
+<a name="rest_code_8c1b54df623b4d0caa7ebad6d0654815-2"></a>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Lanyon<span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_8c1b54df623b4d0caa7ebad6d0654815-3"></a>  <span class="nt">&lt;small&gt;</span>A Jekyll theme<span class="nt">&lt;/small&gt;</span>
+<a name="rest_code_8c1b54df623b4d0caa7ebad6d0654815-4"></a><span class="nt">&lt;/h3&gt;</span>
 </pre>
 <p>Versus our port:</p>
-<pre class="code html"><a name="rest_code_0b3e5b20f5764faa9f969c1c0a477630-1"></a><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"brand"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://example.com/"</span> <span class="na">title=</span><span class="s">"My Nikola Site"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span>
+<pre class="code html"><a name="rest_code_0ce46e61a5cd4dfe91b5480a3bdfe582-1"></a><span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"brand"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://example.com/"</span> <span class="na">title=</span><span class="s">"My Nikola Site"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span>
 </pre>
 <p>So, it looks like we will have to fix <tt class="docutils literal">html_site_title</tt> after all:</p>
-<pre class="code html+mako"><a name="rest_code_372e7e0e35a24a2b98fc927c1ad8f958-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_site_title()"</span><span class="cp">&gt;</span>
-<a name="rest_code_372e7e0e35a24a2b98fc927c1ad8f958-2"></a>    <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"brand"</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
-<a name="rest_code_372e7e0e35a24a2b98fc927c1ad8f958-3"></a>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">abs_link</span><span class="p">(</span><span class="n">_link</span><span class="p">(</span><span class="s">"root"</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">lang</span><span class="p">))</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">blog_title</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">blog_title</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
-<a name="rest_code_372e7e0e35a24a2b98fc927c1ad8f958-4"></a>    <span class="nt">&lt;/h3&gt;</span>
-<a name="rest_code_372e7e0e35a24a2b98fc927c1ad8f958-5"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_cc1f1da8d80b4cadbfa080827a85d7db-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_site_title()"</span><span class="cp">&gt;</span>
+<a name="rest_code_cc1f1da8d80b4cadbfa080827a85d7db-2"></a>    <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"brand"</span> <span class="na">class=</span><span class="s">"masthead-title"</span><span class="nt">&gt;</span>
+<a name="rest_code_cc1f1da8d80b4cadbfa080827a85d7db-3"></a>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">abs_link</span><span class="p">(</span><span class="n">_link</span><span class="p">(</span><span class="s">"root"</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">lang</span><span class="p">))</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">blog_title</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"home"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">blog_title</span><span class="cp">}</span><span class="nt">&lt;/a&gt;</span>
+<a name="rest_code_cc1f1da8d80b4cadbfa080827a85d7db-4"></a>    <span class="nt">&lt;/h3&gt;</span>
+<a name="rest_code_cc1f1da8d80b4cadbfa080827a85d7db-5"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
 </pre>
 <p>As for the actual content, that’s not in any of the templates we have seen so far. The page you see is an
 "index.tmpl" page, which means it’s a list of blog posts shown one below the
@@ -630,81 +630,81 @@ other. Obviously it’s not doing
 things in the way the Lanyon CSS expects it to. Here’s the original, which you
 can find in Nikola’s source
 code:</p>
-<pre class="code html+mako"><a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"helper"</span> <span class="na">file=</span><span class="s">"index_helper.tmpl"</span><span class="cp">/&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"comments"</span> <span class="na">file=</span><span class="s">"comments_helper.tmpl"</span><span class="cp">/&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-4"></a><span class="cp">&lt;%</span><span class="nb">inherit</span> <span class="na">file=</span><span class="s">"base.tmpl"</span><span class="cp">/&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-5"></a>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-6"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-7"></a>    <span class="cp">${</span><span class="n">parent</span><span class="o">.</span><span class="n">extra_head</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-8"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">posts</span> <span class="ow">and</span> <span class="p">(</span><span class="n">permalink</span> <span class="o">==</span> <span class="s">'/'</span> <span class="ow">or</span> <span class="n">permalink</span> <span class="o">==</span> <span class="s">'/'</span> <span class="o">+</span> <span class="n">index_file</span><span class="p">):</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-9"></a>        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"prefetch"</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">type=</span><span class="s">"text/html"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-10"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-11"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-12"></a>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-13"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-14"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content_header"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-15"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"postindex"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-16"></a><span class="cp">%</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-17"></a>    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"h-entry post-</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'type'</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-18"></a>    <span class="nt">&lt;header&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-19"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"p-name entry-title"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">class=</span><span class="s">"u-url"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">|</span><span class="n">h</span><span class="cp">}</span><span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-20"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-21"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-22"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-23"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-24"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-25"></a>            <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-26"></a>        <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-27"></a>    <span class="nt">&lt;/header&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-28"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">index_teasers</span><span class="p">:</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-29"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-summary entry-summary"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-30"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-31"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-32"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"e-content entry-content"</span><span class="nt">&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-33"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-34"></a>    <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-35"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-36"></a>    <span class="nt">&lt;/article&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-37"></a><span class="cp">%</span><span class="k"> endfor</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-38"></a><span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-39"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">html_pager</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-40"></a><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link_script</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-41"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">mathjax_script</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_93d6258a7ddd4833945d1a1abc58ea22-42"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-1"></a><span class="cp">## -*- coding: utf-8 -*-</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-2"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"helper"</span> <span class="na">file=</span><span class="s">"index_helper.tmpl"</span><span class="cp">/&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-3"></a><span class="cp">&lt;%</span><span class="nb">namespace</span> <span class="na">name=</span><span class="s">"comments"</span> <span class="na">file=</span><span class="s">"comments_helper.tmpl"</span><span class="cp">/&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-4"></a><span class="cp">&lt;%</span><span class="nb">inherit</span> <span class="na">file=</span><span class="s">"base.tmpl"</span><span class="cp">/&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-5"></a>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-6"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"extra_head"</span><span class="cp">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-7"></a>    <span class="cp">${</span><span class="n">parent</span><span class="o">.</span><span class="n">extra_head</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-8"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="n">posts</span> <span class="ow">and</span> <span class="p">(</span><span class="n">permalink</span> <span class="o">==</span> <span class="s">'/'</span> <span class="ow">or</span> <span class="n">permalink</span> <span class="o">==</span> <span class="s">'/'</span> <span class="o">+</span> <span class="n">index_file</span><span class="p">):</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-9"></a>        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"prefetch"</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">type=</span><span class="s">"text/html"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-10"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-11"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-12"></a>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-13"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-14"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content_header"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-15"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"postindex"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-16"></a><span class="cp">%</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-17"></a>    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"h-entry post-</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'type'</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-18"></a>    <span class="nt">&lt;header&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-19"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"p-name entry-title"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">class=</span><span class="s">"u-url"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">|</span><span class="n">h</span><span class="cp">}</span><span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-20"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-21"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-22"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-23"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-24"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-25"></a>            <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-26"></a>        <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-27"></a>    <span class="nt">&lt;/header&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-28"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">index_teasers</span><span class="p">:</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-29"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-summary entry-summary"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-30"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-31"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-32"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"e-content entry-content"</span><span class="nt">&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-33"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-34"></a>    <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-35"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-36"></a>    <span class="nt">&lt;/article&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-37"></a><span class="cp">%</span><span class="k"> endfor</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-38"></a><span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-39"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">html_pager</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-40"></a><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link_script</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-41"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">mathjax_script</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_dd1f365352a14e8e879b9e5da695aa0d-42"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
 </pre>
 <p>And this is how it looks after I played with it for a while, making it generate code that looks closer to
 the Lanyon original:</p>
-<pre class="code html+mako"><a name="rest_code_4b75b591e4fe4378a441a731218333cc-1"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-2"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content_header"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-3"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"posts"</span><span class="nt">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-4"></a><span class="cp">%</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-5"></a>    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post h-entry post-</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'type'</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-6"></a>    <span class="nt">&lt;header&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-7"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title p-name"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">class=</span><span class="s">"u-url"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">|</span><span class="n">h</span><span class="cp">}</span><span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-8"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-9"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-10"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"post-date published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-11"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-12"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-13"></a>            <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-14"></a>        <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-15"></a>    <span class="nt">&lt;/header&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-16"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">index_teasers</span><span class="p">:</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-17"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-summary entry-summary"</span><span class="nt">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-18"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-19"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-20"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"e-content entry-content"</span><span class="nt">&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-21"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-22"></a>    <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-23"></a>    <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-24"></a>    <span class="nt">&lt;/article&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-25"></a><span class="cp">%</span><span class="k"> endfor</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-26"></a><span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-27"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">html_pager</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-28"></a><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link_script</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-29"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">mathjax_script</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_4b75b591e4fe4378a441a731218333cc-30"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_08cfff588c094aefa08515567a1e97ab-1"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content"</span><span class="cp">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-2"></a><span class="cp">&lt;%</span><span class="nb">block</span> <span class="na">name=</span><span class="s">"content_header"</span><span class="cp">&gt;&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-3"></a><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"posts"</span><span class="nt">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-4"></a><span class="cp">%</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-5"></a>    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post h-entry post-</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'type'</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-6"></a>    <span class="nt">&lt;header&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-7"></a>        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title p-name"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">class=</span><span class="s">"u-url"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">|</span><span class="n">h</span><span class="cp">}</span><span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-8"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-9"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-10"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"post-date published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-11"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-12"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-13"></a>            <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-14"></a>        <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-15"></a>    <span class="nt">&lt;/header&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-16"></a>    <span class="cp">%</span><span class="k">if</span> <span class="n">index_teasers</span><span class="p">:</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-17"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-summary entry-summary"</span><span class="nt">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-18"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-19"></a>    <span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-20"></a>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"e-content entry-content"</span><span class="nt">&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-21"></a>    <span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">teaser_only</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-22"></a>    <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-23"></a>    <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-24"></a>    <span class="nt">&lt;/article&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-25"></a><span class="cp">%</span><span class="k"> endfor</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-26"></a><span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-27"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">html_pager</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-28"></a><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link_script</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-29"></a><span class="cp">${</span><span class="n">helper</span><span class="o">.</span><span class="n">mathjax_script</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_08cfff588c094aefa08515567a1e97ab-30"></a><span class="cp">&lt;/%</span><span class="nb">block</span><span class="cp">&gt;</span>
 </pre>
 <p>With these changes, it looks… similar?</p>
 <div class="figure">
@@ -712,22 +712,22 @@ the Lanyon original:</p>
 <p class="caption">It does!</p>
 </div>
 <p>Similar changes (basically adding class names to elements) needed to be done in <tt class="docutils literal">post_header.tmpl</tt>:</p>
-<pre class="code html+mako"><a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_post_header()"</span><span class="cp">&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-2"></a>    <span class="nt">&lt;header&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-3"></a>        <span class="cp">${</span><span class="n">html_title</span><span class="p">()</span><span class="cp">}</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-4"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-5"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-6"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"post-date published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">itemprop=</span><span class="s">"datePublished"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-7"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-8"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-9"></a>            <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-10"></a>            <span class="cp">%</span><span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">description</span><span class="p">():</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-11"></a>                <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">itemprop=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">description</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-12"></a>            <span class="cp">%</span><span class="k">endif</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-13"></a>        <span class="nt">&lt;/div&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-14"></a>        <span class="cp">${</span><span class="n">html_translations</span><span class="p">(</span><span class="n">post</span><span class="p">)</span><span class="cp">}</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-15"></a>    <span class="nt">&lt;/header&gt;</span>
-<a name="rest_code_c1fd6a08c6584a5a900f4a61d0a49645-16"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_73a698c54da242518e4255ba4f62a245-1"></a><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"html_post_header()"</span><span class="cp">&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-2"></a>    <span class="nt">&lt;header&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-3"></a>        <span class="cp">${</span><span class="n">html_title</span><span class="p">()</span><span class="cp">}</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-4"></a>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-5"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"byline author vcard"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"byline-name fn"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">()</span><span class="cp">}</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-6"></a>            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"bookmark"</span><span class="nt">&gt;&lt;time</span> <span class="na">class=</span><span class="s">"post-date published dt-published"</span> <span class="na">datetime=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span> <span class="na">itemprop=</span><span class="s">"datePublished"</span> <span class="na">title=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">formatted_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">)</span><span class="cp">}</span><span class="nt">&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-7"></a>            <span class="cp">%</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s">'nocomments'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">site_has_comments</span><span class="p">:</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-8"></a>                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"commentline"</span><span class="nt">&gt;</span><span class="cp">${</span><span class="n">comments</span><span class="o">.</span><span class="n">comment_link</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">permalink</span><span class="p">(),</span> <span class="n">post</span><span class="o">.</span><span class="n">_base_path</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-9"></a>            <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-10"></a>            <span class="cp">%</span><span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">description</span><span class="p">():</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-11"></a>                <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">itemprop=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">description</span><span class="p">()</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-12"></a>            <span class="cp">%</span><span class="k">endif</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-13"></a>        <span class="nt">&lt;/div&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-14"></a>        <span class="cp">${</span><span class="n">html_translations</span><span class="p">(</span><span class="n">post</span><span class="p">)</span><span class="cp">}</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-15"></a>    <span class="nt">&lt;/header&gt;</span>
+<a name="rest_code_73a698c54da242518e4255ba4f62a245-16"></a><span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
 </pre>
 </div>
 <div class="section" id="customization">
@@ -736,21 +736,21 @@ the Lanyon original:</p>
 you <em>can</em> also do that in the Nikola port. But we prefer to use options for that, so that you can get a later, better
 version of the theme and it will still "just work".</p>
 <p>Let’s see the color schemes first. They apply easily, just tweak your <tt class="docutils literal">body</tt> element like this:</p>
-<pre class="code html"><a name="rest_code_8c603ba1a34140ae9ad47a0dbb066eab-1"></a><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"theme-base-08"</span><span class="nt">&gt;</span>
-<a name="rest_code_8c603ba1a34140ae9ad47a0dbb066eab-2"></a>...
-<a name="rest_code_8c603ba1a34140ae9ad47a0dbb066eab-3"></a><span class="nt">&lt;/body&gt;</span>
+<pre class="code html"><a name="rest_code_922efdbf37d642c0b5e30722c9a50778-1"></a><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"theme-base-08"</span><span class="nt">&gt;</span>
+<a name="rest_code_922efdbf37d642c0b5e30722c9a50778-2"></a>...
+<a name="rest_code_922efdbf37d642c0b5e30722c9a50778-3"></a><span class="nt">&lt;/body&gt;</span>
 </pre>
 <p>We can tweak <tt class="docutils literal">base.tmpl</tt> to do just that:</p>
-<pre class="code html+mako"><a name="rest_code_7e8e4a6f46774644861841cf7bb98485-1"></a><span class="cp">%</span> <span class="k">if</span> <span class="n">lanyon_subtheme</span><span class="p">:</span>
-<a name="rest_code_7e8e4a6f46774644861841cf7bb98485-2"></a><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"</span><span class="cp">${</span><span class="n">lanyon_subtheme</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
-<a name="rest_code_7e8e4a6f46774644861841cf7bb98485-3"></a><span class="cp">%</span><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_7e8e4a6f46774644861841cf7bb98485-4"></a><span class="nt">&lt;body&gt;</span>
-<a name="rest_code_7e8e4a6f46774644861841cf7bb98485-5"></a><span class="cp">%</span><span class="k">endif</span>
+<pre class="code html+mako"><a name="rest_code_5bd20501065e4b99b1d5579ce395e551-1"></a><span class="cp">%</span> <span class="k">if</span> <span class="n">lanyon_subtheme</span><span class="p">:</span>
+<a name="rest_code_5bd20501065e4b99b1d5579ce395e551-2"></a><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"</span><span class="cp">${</span><span class="n">lanyon_subtheme</span><span class="cp">}</span><span class="s">"</span><span class="nt">&gt;</span>
+<a name="rest_code_5bd20501065e4b99b1d5579ce395e551-3"></a><span class="cp">%</span><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_5bd20501065e4b99b1d5579ce395e551-4"></a><span class="nt">&lt;body&gt;</span>
+<a name="rest_code_5bd20501065e4b99b1d5579ce395e551-5"></a><span class="cp">%</span><span class="k">endif</span>
 </pre>
 <p>And then we can put the options in conf.py’s <tt class="docutils literal">GLOBAL_CONTEXT</tt>:</p>
-<pre class="code python"><a name="rest_code_25c449688eaf46e78723d222380ec2ca-1"></a><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_25c449688eaf46e78723d222380ec2ca-2"></a>    <span class="s">"lanyon_subtheme"</span><span class="p">:</span> <span class="s">"theme-base-08"</span>
-<a name="rest_code_25c449688eaf46e78723d222380ec2ca-3"></a><span class="p">}</span>
+<pre class="code python"><a name="rest_code_cc9a92c3019342faa3266be4cae355be-1"></a><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_cc9a92c3019342faa3266be4cae355be-2"></a>    <span class="s">"lanyon_subtheme"</span><span class="p">:</span> <span class="s">"theme-base-08"</span>
+<a name="rest_code_cc9a92c3019342faa3266be4cae355be-3"></a><span class="p">}</span>
 </pre>
 <div class="figure">
 <a class="reference external image-reference" href="https://getnikola.com/images/lanyon-7.png"><img alt="https://getnikola.com/images/lanyon-7.thumbnail.png" src="https://getnikola.com/images/lanyon-7.thumbnail.png"></a>

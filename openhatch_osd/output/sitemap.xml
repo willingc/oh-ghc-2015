@@ -7,154 +7,194 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://example.com/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T18:13:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/2012/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <loc>https://example.com/2015/</loc>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/archive.html</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/authors/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/authors/carol-willing/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/authors/roberto-alsina/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T18:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/blog/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/cat_nikola/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/cat_pre-workshop/</loc>
+  <lastmod>2015-10-06T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/contributors/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/demo/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/ghc/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/mentors/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/nikola/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/open-source/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/python/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/welcome/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/galleries/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/galleries/demo/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/listings/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/listings/__pycache__/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/listings/hello.py.html</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/posts/welcome-to-nikola/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <loc>https://example.com/posts/getting-ready-for-open-source-day/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/welcome-to-osd/</loc>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/a-study-in-scarlet/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/about-nikola/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/bootstrap-demo/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/charts/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/command-lineterminal/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/communications/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/creating-a-theme/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/dr-nikolas-vendetta/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/editors/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/extending/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/handbook/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/internals/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/listings-demo/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/open-source-and-you/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/path-handlers/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/quickref/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/quickstart/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/slides-demo/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/social_buttons/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/theming/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/upgrading-to-v6/</loc>
-  <lastmod>2015-09-24T07:51:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/version-control-git/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/stories/welcome/</loc>
-  <lastmod>2015-09-24T08:00:00Z</lastmod>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
 </urlset>

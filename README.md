@@ -1,4 +1,4 @@
-# oh-ghc-2015
+# [oh-ghc-2015](https://willingc.github.io/oh-ghc-2015/)
 
 ## Welcome to Open Source Day and OpenHatch!
 

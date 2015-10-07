@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Carol Willing"  # (translatable)
 BLOG_TITLE = "GHC 2015 Open Source Day with OpenHatch"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "https://willingc.github.io/oh-ghc-2015/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -532,7 +532,7 @@ REDIRECTIONS = []
 # For user.github.io OR organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.
 GITHUB_SOURCE_BRANCH = 'master'
-GITHUB_DEPLOY_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'

@@ -6,71 +6,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://example.com/authors/carol-willing.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/authors/carol-willing.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/authors/roberto-alsina.xml</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/authors/roberto-alsina.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/blog.xml</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/blog.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/cat_nikola.xml</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_nikola.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/cat_pre-workshop.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_pre-workshop.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/contributors.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/contributors.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/demo.xml</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/demo.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/ghc.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/ghc.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/mentors.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/mentors.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/nikola.xml</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/nikola.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/open-source.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/open-source.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/python.xml</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/python.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/categories/welcome.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/welcome.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/galleries/demo/rss.xml</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/galleries/demo/rss.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/galleries/rss.xml</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/galleries/rss.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/rss.xml</loc>
-  <lastmod>2015-10-06T17:50:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/rss.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2015-10-06T18:14:00Z</lastmod>
+  <loc>https://willingc.github.io/oh-ghc-2015/sitemap.xml</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>

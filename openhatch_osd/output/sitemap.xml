@@ -6,195 +6,195 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://example.com/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/</loc>
+  <lastmod>2015-10-06T18:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/2015/</loc>
+  <lastmod>2015-10-06T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/archive.html</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/authors/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/authors/carol-willing/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/authors/roberto-alsina/</loc>
+  <lastmod>2015-10-06T17:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/</loc>
   <lastmod>2015-10-06T18:13:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/2015/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/blog/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/archive.html</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/authors/</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/authors/carol-willing/</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/authors/roberto-alsina/</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/categories/</loc>
-  <lastmod>2015-10-06T18:13:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/categories/blog/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_nikola/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/cat_nikola/</loc>
-  <lastmod>2015-10-06T17:33:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/categories/cat_pre-workshop/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_pre-workshop/</loc>
   <lastmod>2015-10-06T17:50:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/contributors/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/contributors/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/demo/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/demo/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/ghc/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/ghc/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/mentors/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/mentors/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/nikola/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/nikola/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/open-source/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/open-source/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/python/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/python/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/welcome/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/categories/welcome/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/galleries/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/galleries/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/galleries/demo/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/galleries/demo/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/listings/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/listings/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/listings/__pycache__/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/listings/__pycache__/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/listings/hello.py.html</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/listings/hello.py.html</loc>
+  <lastmod>2015-10-07T04:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</loc>
   <lastmod>2015-10-06T17:48:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/posts/getting-ready-for-open-source-day/</loc>
-  <lastmod>2015-10-06T17:48:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/posts/welcome-to-osd/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/a-study-in-scarlet/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/a-study-in-scarlet/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/about-nikola/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/about-nikola/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/bootstrap-demo/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/bootstrap-demo/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/charts/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/charts/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/command-lineterminal/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/command-lineterminal/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/communications/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/communications/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/creating-a-theme/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/creating-a-theme/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/dr-nikolas-vendetta/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/dr-nikolas-vendetta/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/editors/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/editors/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/extending/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/extending/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/handbook/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/handbook/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/internals/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/internals/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/listings-demo/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/listings-demo/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/open-source-and-you/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/open-source-and-you/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/path-handlers/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/path-handlers/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/quickref/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/quickref/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/quickstart/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/quickstart/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/slides-demo/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/slides-demo/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/social_buttons/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/social_buttons/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/theming/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/theming/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/upgrading-to-v6/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/upgrading-to-v6/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/version-control-git/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/version-control-git/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/stories/welcome/</loc>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/welcome/</loc>
   <lastmod>2015-10-06T17:33:00Z</lastmod>
  </url>
 </urlset>

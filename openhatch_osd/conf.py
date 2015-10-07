@@ -21,10 +21,10 @@ BLOG_AUTHOR = "Carol Willing"  # (translatable)
 BLOG_TITLE = "GHC 2015 Open Source Day with OpenHatch"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "https://willingc.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://example.com/"
+BASE_URL = "https://willingc.github.io/"
 BLOG_EMAIL = "carolcode@willingconsulting.com"
 BLOG_DESCRIPTION = "Get started with Open Source"  # (translatable)
 
@@ -531,16 +531,16 @@ REDIRECTIONS = []
 
 # For user.github.io OR organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.
-# GITHUB_SOURCE_BRANCH = 'master'
-# GITHUB_DEPLOY_BRANCH = 'gh-pages'
+GITHUB_SOURCE_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
 
 # The name of the remote where you wish to push to, using github_deploy.
-# GITHUB_REMOTE_NAME = 'origin'
+GITHUB_REMOTE_NAME = 'origin'
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
-# OUTPUT_FOLDER = 'output'
+OUTPUT_FOLDER = 'output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'

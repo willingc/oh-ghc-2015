@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>GHC 2015 Open Source Day with OpenHatch (openhatch)</title><link>https://willingc.github.io/oh-ghc-2015/</link><description></description><atom:link href="https://willingc.github.io/oh-ghc-2015/categories/cat_openhatch.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 17:29:47 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="section" id="hello-and-thank-you"&gt;
-&lt;h2&gt;Hello and thank you&lt;/h2&gt;
-&lt;p&gt;I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Open Source Day with OpenHatch (openhatch)</title><link>https://willingc.github.io/oh-ghc-2015/</link><description></description><atom:link rel="self" type="application/rss+xml" href="https://willingc.github.io/oh-ghc-2015/categories/cat_openhatch.xml"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 17:44:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;p&gt;I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
 Please take a moment to look around, introduce yourselves, and get ready to learn and contribute!&lt;/p&gt;
 &lt;p&gt;I hope you will leave this workshop with some new insights and knowledge about the tools and
 processes of open source.&lt;/p&gt;
 &lt;p&gt;My personal goal for this workshop is to inspire you, a community of confident, caring
 contributors, to share your talents with our world.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="section" id="today-s-schedule"&gt;
 &lt;h2&gt;Today's schedule&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -18,10 +15,12 @@ contributors, to share your talents with our world.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="taking-care-of-you"&gt;
 &lt;h2&gt;Taking care of you&lt;/h2&gt;
-&lt;p&gt;Conferences, and learning, can be exhausting. Please take care and enjoy!
-- Breaks
-- Lunch
-- Venue, first aid,&lt;/p&gt;
+&lt;p&gt;Conferences, and learning, can be exhausting. Please take care and enjoy!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Breaks&lt;/li&gt;
+&lt;li&gt;Lunch&lt;/li&gt;
+&lt;li&gt;Venue, first aid,&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="projects"&gt;
 &lt;h2&gt;Projects&lt;/h2&gt;
@@ -40,9 +39,9 @@ your contribution on these projects)&lt;/li&gt;
 &lt;li&gt;Contacts&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="ghc-links"&gt;
-&lt;h2&gt;GHC Links&lt;/h2&gt;
-&lt;p&gt;&lt;cite&gt;Conference schedule &amp;lt;http://schedule.gracehopper.org/&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="section" id="ghc-helpful-links"&gt;
+&lt;h2&gt;GHC Helpful Links&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://schedule.gracehopper.org/"&gt;Conference schedule&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="next-steps"&gt;
 &lt;h2&gt;Next steps&lt;/h2&gt;

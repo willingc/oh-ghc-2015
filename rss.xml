@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>GHC 2015 Open Source Day with OpenHatch</title><link>https://willingc.github.io/oh-ghc-2015/</link><description>Get started with Open Source</description><atom:link href="https://willingc.github.io/oh-ghc-2015/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 17:29:47 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="section" id="hello-and-thank-you"&gt;
-&lt;h2&gt;Hello and thank you&lt;/h2&gt;
-&lt;p&gt;I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Open Source Day with OpenHatch</title><link>https://willingc.github.io/oh-ghc-2015/</link><description>Get started with Open Source at GHC 2015</description><atom:link type="application/rss+xml" href="https://willingc.github.io/oh-ghc-2015/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 17:59:07 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;p&gt;I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
 Please take a moment to look around, introduce yourselves, and get ready to learn and contribute!&lt;/p&gt;
 &lt;p&gt;I hope you will leave this workshop with some new insights and knowledge about the tools and
 processes of open source.&lt;/p&gt;
 &lt;p&gt;My personal goal for this workshop is to inspire you, a community of confident, caring
 contributors, to share your talents with our world.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="section" id="today-s-schedule"&gt;
 &lt;h2&gt;Today's schedule&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -18,10 +15,12 @@ contributors, to share your talents with our world.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="taking-care-of-you"&gt;
 &lt;h2&gt;Taking care of you&lt;/h2&gt;
-&lt;p&gt;Conferences, and learning, can be exhausting. Please take care and enjoy!
-- Breaks
-- Lunch
-- Venue, first aid,&lt;/p&gt;
+&lt;p&gt;Conferences, and learning, can be exhausting. Please take care and enjoy!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Breaks&lt;/li&gt;
+&lt;li&gt;Lunch&lt;/li&gt;
+&lt;li&gt;Venue, first aid,&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="projects"&gt;
 &lt;h2&gt;Projects&lt;/h2&gt;
@@ -40,9 +39,9 @@ your contribution on these projects)&lt;/li&gt;
 &lt;li&gt;Contacts&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="ghc-links"&gt;
-&lt;h2&gt;GHC Links&lt;/h2&gt;
-&lt;p&gt;&lt;cite&gt;Conference schedule &amp;lt;http://schedule.gracehopper.org/&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="section" id="ghc-helpful-links"&gt;
+&lt;h2&gt;GHC Helpful Links&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://schedule.gracehopper.org/"&gt;Conference schedule&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="next-steps"&gt;
 &lt;h2&gt;Next steps&lt;/h2&gt;
@@ -55,14 +54,34 @@ your contribution on these projects)&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/getnikola/nikola"&gt;Nikola GitHub repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>ghc</category><category>nikola</category><category>openhatch</category><category>python</category><category>systers</category><guid>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</guid><pubDate>Thu, 08 Oct 2015 07:00:00 GMT</pubDate></item><item><title>Getting ready for Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;p&gt;Welcome to OpenHatch and Grace Hopper's Open Source Day 2015. While we will be spending only a few
-hours together in Houston, I hope that you will find the time valuable and you will share your
+&lt;/div&gt;&lt;/div&gt;</description><category>ghc</category><category>nikola</category><category>openhatch</category><category>python</category><category>systers</category><guid>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</guid><pubDate>Thu, 08 Oct 2015 07:00:00 GMT</pubDate></item><item><title>Getting ready for Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;p&gt;While we will be spending only a few hours together in Houston, I hope that you will find the time
+valuable. In the days and months after Grace Hopper, I hope that many of you will share your
 knowledge and experience with others.&lt;/p&gt;
-&lt;p&gt;I find contributing to open source as a great way to empower others to solve real world problems.
-I am so pleased that Open Source Day 2015's theme is Humanitarian Open Source.&lt;/p&gt;
+&lt;p&gt;On a personal note, I find contributing to open source as a great way to empower others to solve
+real world problems. I am so pleased that Open Source Day 2015's theme focuses on
+Humanitarian Open Source.&lt;/p&gt;
+&lt;div class="section" id="attendees"&gt;
+&lt;h2&gt;Attendees&lt;/h2&gt;
+&lt;p&gt;We're all busy and Grace Hopper is an exciting event to attend. If you have a personal laptop,
+please do bring it to the workshop. I recognize that not everyone may be bringing a computer, no
+worries as you will still be able to participate and learn from the workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mentors"&gt;
+&lt;h2&gt;Mentors&lt;/h2&gt;
+&lt;p&gt;Thank you for sharing your time and love of computer science. Other than perhaps skimming this
+website, installing git on your laptop and having an editor that you feel comfortable using. Please
+bring your patience and enthusiasm too.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="projects"&gt;
 &lt;h2&gt;Projects&lt;/h2&gt;
-&lt;p&gt;OpenHatch
-Systers Volunteer Management System
-"To be named and created" Open Source Day 2015 Pay-It-Forward Project&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;OpenHatch website&lt;/li&gt;
+&lt;li&gt;Systers Volunteer Management System&lt;/li&gt;
+&lt;li&gt;"To be named and created" Open Source Day 2015 Pay-It-Forward Project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="thank-you"&gt;
+&lt;h2&gt;Thank you&lt;/h2&gt;
+&lt;p&gt;Please take a moment during the entire conference to thank the many volunteers and organizers.
+Thank you to the Hoppers too!&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;</description><category>contributors</category><category>ghc</category><category>mentors</category><category>open source</category><category>welcome</category><guid>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</guid><pubDate>Tue, 06 Oct 2015 17:36:59 GMT</pubDate></item></channel></rss>

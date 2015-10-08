@@ -1,52 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>GHC 2015 Open Source Day with OpenHatch (openhatch)</title><link>https://willingc.github.io/oh-ghc-2015/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://willingc.github.io/oh-ghc-2015/categories/openhatch.xml"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 14:53:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="system-message" id="id1"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 1); &lt;em&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Inline interpreted text or phrase reference start-string without end-string.&lt;/div&gt;
-&lt;div class="section" id="welcome-to-open-source-day-and-openhatch"&gt;
-&lt;h2&gt;Welcome to Open Source Day and OpenHatch!&lt;/h2&gt;
-&lt;p&gt;I am so pleased that you are joining us today. Please look around, introduce yourselves, and
-get ready to learn and contribute!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GHC 2015 Open Source Day with OpenHatch (openhatch)</title><link>https://willingc.github.io/oh-ghc-2015/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://willingc.github.io/oh-ghc-2015/categories/openhatch.xml"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 17:21:56 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="section" id="hello-and-thank-you"&gt;
+&lt;h2&gt;Hello and thank you&lt;/h2&gt;
+&lt;p&gt;I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
+Please take a moment to look around, introduce yourselves, and get ready to learn and contribute!&lt;/p&gt;
+&lt;p&gt;I hope you will leave this workshop with some new insights and knowledge about the tools and
+processes of open source.&lt;/p&gt;
+&lt;p&gt;My personal goal for this workshop is to inspire you, a community of confident, caring
+contributors, to share your talents with our world.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="housekeeping"&gt;
-&lt;h2&gt;Housekeeping&lt;/h2&gt;
+&lt;div class="section" id="today-s-schedule"&gt;
+&lt;h2&gt;Today's schedule&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Day's schedule&lt;/li&gt;
-&lt;li&gt;Venue&lt;/li&gt;
-&lt;li&gt;Breaks&lt;/li&gt;
-&lt;li&gt;Lunch&lt;/li&gt;
 &lt;li&gt;Communications&lt;/li&gt;
 &lt;li&gt;Wrap up&lt;/li&gt;
 &lt;li&gt;What's next&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="post-its"&gt;
-&lt;h2&gt;Post Its&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Windows&lt;/li&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;li&gt;OS X&lt;/li&gt;
-&lt;li&gt;Help flag&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="communication-during-workshop"&gt;
-&lt;h2&gt;Communication during workshop&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Slack group:&lt;/li&gt;
-&lt;li&gt;IRC: (#openhatch on Freenode, #systers-dev, #outreachy)&lt;/li&gt;
-&lt;li&gt;Google Hangout?&lt;/li&gt;
-&lt;li&gt;GitHub Issues&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sharing-contact-information-google-doc"&gt;
-&lt;h2&gt;Sharing contact information (Google doc?)&lt;/h2&gt;
-&lt;p&gt;Private google docs&lt;/p&gt;
+&lt;div class="section" id="taking-care-of-you"&gt;
+&lt;h2&gt;Taking care of you&lt;/h2&gt;
+&lt;p&gt;Conferences, and learning, can be exhausting. Please take care and enjoy!
+- Breaks
+- Lunch
+- Venue, first aid,&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="projects"&gt;
 &lt;h2&gt;Projects&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;OpenHatch&lt;/li&gt;
+&lt;li&gt;OpenHatch website&lt;/li&gt;
 &lt;li&gt;Systers VMS Volunteer Management System&lt;/li&gt;
-&lt;li&gt;Open Source Day 2015 Inspire Others Site (Similar to this site using Nikola)&lt;/li&gt;
+&lt;li&gt;Open Source Day 2015 - OpenHatch "Inspire Others" Site&lt;/li&gt;
 &lt;li&gt;Your favorite open source project (note: mentors may not be as experienced or able to commit
 your contribution on these projects)&lt;/li&gt;
 &lt;/ul&gt;
@@ -60,21 +42,23 @@ your contribution on these projects)&lt;/li&gt;
 &lt;/div&gt;
 &lt;div class="section" id="ghc-links"&gt;
 &lt;h2&gt;GHC Links&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id3"&gt;&lt;span class="problematic" id="id4"&gt;`Conference schedule http://schedule.gracehopper.org/`_&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="nikola"&gt;
-&lt;h3&gt;Nikola&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id1"&gt;&lt;span class="problematic" id="id2"&gt;`Conference schedule http://schedule.gracehopper.org/`_&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="next-steps"&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;Let's get started. Thanks in advance for contributing to the change you want to see in the world.&lt;/p&gt;
+&lt;div class="section" id="about-nikola"&gt;
+&lt;h3&gt;About Nikola&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;IRC: #nikola on Freenode&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://getnikola.org"&gt;Nikola Website&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/getnikola/nikola"&gt;Nikola GitHub repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Next steps:&lt;/p&gt;
-&lt;p&gt;Have fun. Contribute to the change you want to see in the world.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="system-messages section"&gt;
 &lt;h2&gt;Docutils System Messages&lt;/h2&gt;
-&lt;div class="system-message" id="id3"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 54); &lt;em&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id4"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 46); &lt;em&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 Unknown target name: "conference schedule http://schedule.gracehopper.org/".&lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</description><category>ghc</category><category>nikola</category><category>openhatch</category><category>python</category><category>systers</category><guid>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</guid><pubDate>Thu, 08 Oct 2015 07:00:00 GMT</pubDate></item></channel></rss>

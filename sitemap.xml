@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/</loc>
-  <lastmod>2015-10-08T17:39:00Z</lastmod>
+  <lastmod>2015-10-08T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/2015/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/archive.html</loc>
-  <lastmod>2015-10-08T17:39:00Z</lastmod>
+  <lastmod>2015-10-08T19:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/</loc>
@@ -83,7 +83,7 @@
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/listings/hello.py.html</loc>
-  <lastmod>2015-10-08T17:39:00Z</lastmod>
+  <lastmod>2015-10-08T19:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</loc>
@@ -134,6 +134,10 @@
   <lastmod>2015-10-08T13:40:00Z</lastmod>
  </url>
  <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/getting-ready/</loc>
+  <lastmod>2015-10-08T18:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://willingc.github.io/oh-ghc-2015/stories/handbook/</loc>
   <lastmod>2015-10-08T13:40:00Z</lastmod>
  </url>
@@ -180,6 +184,10 @@
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/stories/version-control-git/</loc>
   <lastmod>2015-10-08T13:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://willingc.github.io/oh-ghc-2015/stories/welcome-to-osd/</loc>
+  <lastmod>2015-10-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/stories/welcome/</loc>

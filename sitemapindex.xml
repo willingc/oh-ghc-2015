@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_openhatch.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_pre-workshop.xml</loc>
@@ -19,7 +19,7 @@
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/ghc.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/mentors.xml</loc>
@@ -27,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/nikola.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/open-source.xml</loc>
@@ -35,15 +35,15 @@
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/openhatch.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/python.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/systers.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/welcome.xml</loc>
@@ -59,10 +59,10 @@
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/rss.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://willingc.github.io/oh-ghc-2015/sitemap.xml</loc>
-  <lastmod>2015-10-08T17:21:00Z</lastmod>
+  <lastmod>2015-10-08T17:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>

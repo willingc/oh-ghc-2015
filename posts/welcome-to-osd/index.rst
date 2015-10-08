@@ -52,7 +52,7 @@ GHC Official Open Source Day Documentation
 
 GHC Links
 ---------
-`Conference schedule http://schedule.gracehopper.org/`_
+`Conference schedule <http://schedule.gracehopper.org/>`
 
 
 Next steps

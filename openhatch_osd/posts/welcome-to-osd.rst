@@ -56,13 +56,13 @@ GHC Links
 
 
 Next steps
-==========
+----------
 
 Let's get started. Thanks in advance for contributing to the change you want to see in the world.
 
 
 About Nikola
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 - IRC: #nikola on Freenode
 - `Nikola Website <https://getnikola.org>`_
 - `Nikola GitHub repository <https://github.com/getnikola/nikola>`_

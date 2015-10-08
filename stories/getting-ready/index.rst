@@ -46,9 +46,9 @@ Projects
 * Systers Volunteer Management System
 * "To be named and created" Open Source Day 2015 Pay-It-Forward Project
 
-A nice post about OpenHatch and Open Source Day by Jen Wike Huger at `Opensource.com
- <https://opensource.com/life/15/10/ghc-interview-carol-willing>`_. Jen will be speaking at
-GHC too.
+A nice post about OpenHatch and Open Source Day by Jen Wike Huger at
+`Opensource.com <https://opensource.com/life/15/10/ghc-interview-carol-willing>`_. Jen will be
+speaking at GHC too.
 
 Thank you
 ---------

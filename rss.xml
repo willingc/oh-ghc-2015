@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>GHC 2015 Open Source Day with OpenHatch</title><link>https://willingc.github.io/oh-ghc-2015/</link><description>Get started with Open Source</description><atom:link type="application/rss+xml" rel="self" href="https://willingc.github.io/oh-ghc-2015/rss.xml"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 14:46:07 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="system-message" id="id1"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>GHC 2015 Open Source Day with OpenHatch</title><link>https://willingc.github.io/oh-ghc-2015/</link><description>Get started with Open Source</description><atom:link type="application/rss+xml" rel="self" href="https://willingc.github.io/oh-ghc-2015/rss.xml"></atom:link><language>en</language><lastBuildDate>Thu, 08 Oct 2015 14:53:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome to Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;div class="system-message" id="id1"&gt;
 &lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 1); &lt;em&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 Inline interpreted text or phrase reference start-string without end-string.&lt;/div&gt;
 &lt;div class="section" id="welcome-to-open-source-day-and-openhatch"&gt;
@@ -61,12 +61,16 @@ your contribution on these projects)&lt;/li&gt;
 &lt;div class="section" id="ghc-links"&gt;
 &lt;h2&gt;GHC Links&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/#id3"&gt;&lt;span class="problematic" id="id4"&gt;`Conference schedule http://schedule.gracehopper.org/`_&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;### Nikola
-- IRC: #nikola on Freenode
-- [Nikola Website](&lt;a class="reference external" href="https://getnikola.org"&gt;https://getnikola.org&lt;/a&gt;)
-- [Nikola GitHub repository](&lt;a class="reference external" href="https://github.com/getnikola/nikola"&gt;https://github.com/getnikola/nikola&lt;/a&gt;)&lt;/p&gt;
+&lt;div class="section" id="nikola"&gt;
+&lt;h3&gt;Nikola&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;IRC: #nikola on Freenode&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://getnikola.org"&gt;Nikola Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/getnikola/nikola"&gt;Nikola GitHub repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Next steps:&lt;/p&gt;
 &lt;p&gt;Have fun. Contribute to the change you want to see in the world.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="system-messages section"&gt;
 &lt;h2&gt;Docutils System Messages&lt;/h2&gt;

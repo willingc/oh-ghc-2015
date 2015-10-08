@@ -62,10 +62,11 @@ GHC Links
 ---------
 `Conference schedule http://schedule.gracehopper.org/`_
 
-### Nikola
+Nikola
+~~~~~~
 - IRC: #nikola on Freenode
-- [Nikola Website](https://getnikola.org)
-- [Nikola GitHub repository](https://github.com/getnikola/nikola)
+- `Nikola Website <https://getnikola.org>`_
+- `Nikola GitHub repository <https://github.com/getnikola/nikola>`_
 
 Next steps:
 

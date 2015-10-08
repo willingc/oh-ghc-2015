@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/</loc>
-  <lastmod>2015-10-08T14:08:00Z</lastmod>
+  <lastmod>2015-10-08T14:46:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/2015/</loc>
@@ -18,28 +18,8 @@
   <lastmod>2015-10-08T14:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/authors/</loc>
-  <lastmod>2015-10-08T14:08:00Z</lastmod>
- </url>
- <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/authors/carol-willing/</loc>
-  <lastmod>2015-10-08T13:40:00Z</lastmod>
- </url>
- <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/authors/roberto-alsina/</loc>
-  <lastmod>2015-10-08T13:40:00Z</lastmod>
- </url>
- <url>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/</loc>
   <lastmod>2015-10-08T14:46:00Z</lastmod>
- </url>
- <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/categories/blog/</loc>
-  <lastmod>2015-10-08T13:40:00Z</lastmod>
- </url>
- <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_nikola/</loc>
-  <lastmod>2015-10-08T13:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/cat_openhatch/</loc>
@@ -51,10 +31,6 @@
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/categories/contributors/</loc>
-  <lastmod>2015-10-08T13:40:00Z</lastmod>
- </url>
- <url>
-  <loc>https://willingc.github.io/oh-ghc-2015/categories/demo/</loc>
   <lastmod>2015-10-08T13:40:00Z</lastmod>
  </url>
  <url>
@@ -115,7 +91,7 @@
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/posts/welcome-to-osd/</loc>
-  <lastmod>2015-10-08T14:42:00Z</lastmod>
+  <lastmod>2015-10-08T14:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://willingc.github.io/oh-ghc-2015/stories/a-study-in-scarlet/</loc>

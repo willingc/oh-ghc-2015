@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Carol Willing"  # (translatable)
-BLOG_TITLE = "GHC 2015 Open Source Day with OpenHatch"  # (translatable)
+BLOG_TITLE = "Open Source Day with OpenHatch"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://willingc.github.io/oh-ghc-2015/"
@@ -26,7 +26,7 @@ SITE_URL = "https://willingc.github.io/oh-ghc-2015/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "carolcode@willingconsulting.com"
-BLOG_DESCRIPTION = "Get started with Open Source"  # (translatable)
+BLOG_DESCRIPTION = "Get started with Open Source at GHC 2015"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -127,6 +127,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/stories/getting-ready/index.html", "Getting Ready"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -135,6 +136,7 @@ NAVIGATION_LINKS = {
 
 # Name of the theme to use.
 THEME = "bootstrap3"
+#THEME = "srcco.de"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.

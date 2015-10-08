@@ -10,9 +10,6 @@
 Welcome to Open Source Day!
 ===========================
 
-Hello and thank you
--------------------
-
 I am so pleased that you are joining us today. Thank you to the attendees, mentors, and organizers.
 Please take a moment to look around, introduce yourselves, and get ready to learn and contribute!
 
@@ -22,6 +19,7 @@ processes of open source.
 My personal goal for this workshop is to inspire you, a community of confident, caring
 contributors, to share your talents with our world.
 
+
 Today's schedule
 ----------------
 
@@ -29,30 +27,38 @@ Today's schedule
 - Wrap up
 - What's next
 
+
 Taking care of you
 ------------------
+
 Conferences, and learning, can be exhausting. Please take care and enjoy!
+
 - Breaks
 - Lunch
 - Venue, first aid,
 
+
 Projects
 --------
+
 - OpenHatch website
 - Systers VMS Volunteer Management System
 - Open Source Day 2015 - OpenHatch "Inspire Others" Site
 - Your favorite open source project (note: mentors may not be as experienced or able to commit
   your contribution on these projects)
 
+
 GHC Official Open Source Day Documentation
 ------------------------------------------
+
 - Schedule
 - Contacts
 
 
-GHC Links
----------
-`Conference schedule <http://schedule.gracehopper.org/>`
+GHC Helpful Links
+-----------------
+
+`Conference schedule <http://schedule.gracehopper.org/>`_
 
 
 Next steps

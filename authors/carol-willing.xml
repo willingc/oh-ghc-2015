@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GHC 2015 Open Source Day with OpenHatch (Carol Willing)</title><link>https://willingc.github.io/oh-ghc-2015/</link><description></description><atom:link rel="self" href="https://willingc.github.io/oh-ghc-2015/authors/carol-willing.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 07 Oct 2015 04:29:28 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Getting ready for Open Source Day</title><link>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</link><dc:creator>Carol Willing</dc:creator><description>&lt;div&gt;&lt;p&gt;Welcome to OpenHatch and Grace Hopper's Open Source Day 2015. While we will be spending only a few
+hours together in Houston, I hope that you will find the time valuable and you will share your
+knowledge and experience with others.&lt;/p&gt;
+&lt;p&gt;I find contributing to open source as a great way to empower others to solve real world problems.
+I am so pleased that Open Source Day 2015's theme is Humanitarian Open Source.&lt;/p&gt;
+&lt;div class="section" id="projects"&gt;
+&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;p&gt;OpenHatch
+Systers Volunteer Management System
+"To be named and created" Open Source Day 2015 Pay-It-Forward Project&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>contributors</category><category>ghc</category><category>mentors</category><category>open source</category><category>welcome</category><guid>https://willingc.github.io/oh-ghc-2015/posts/getting-ready-for-open-source-day/</guid><pubDate>Tue, 06 Oct 2015 17:36:59 GMT</pubDate></item></channel></rss>

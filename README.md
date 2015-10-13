@@ -45,5 +45,5 @@ Private google docs
 
 ### Nikola
 - IRC: #nikola on Freenode
-- [Nikola Website](https://getnikola.org) 
+- [Nikola Website](https://getnikola.com) 
 - [Nikola GitHub repository](https://github.com/getnikola/nikola)

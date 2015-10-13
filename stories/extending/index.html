@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Extending Nikola | Open Source Day with OpenHatch</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta content="#2c3e50" name="theme-color">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://willingc.github.io/oh-ghc-2015/stories/extending/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
@@ -60,9 +60,6 @@ RestExten">
             <ul class="nav navbar-nav">
 <li>
 <a href="../getting-ready/index.html">Getting Ready</a>
-                </li>
-<li>
-<a href="../mentors/index.html">Mentors</a>
                 </li>
 <li>
 <a href="../../archive.html">Archive</a>
@@ -148,55 +145,55 @@ of Nikola.</p>
 <div class="section" id="command-plugins">
 <h3><a class="toc-backref" href=".#id2">Command Plugins</a></h3>
 <p>When you run <tt class="docutils literal">nikola <span class="pre">--help</span></tt> you will see something like this:</p>
-<pre class="code console"><a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-1"></a><span class="gp">$</span> nikola <span class="nb">help</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-2"></a><span class="go">Nikola is a tool to create static websites and blogs. For full documentation and more</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-3"></a><span class="go">information, please visit https://getnikola.com/</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-4"></a>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-5"></a>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-6"></a><span class="go">Available commands:</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-7"></a><span class="go">nikola auto                 automatically detect site changes, rebuild</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-8"></a><span class="go">                            and optionally refresh a browser</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-9"></a><span class="go">nikola bootswatch_theme     given a swatch name from bootswatch.com and a</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-10"></a><span class="go">                            parent theme, creates a custom theme</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-11"></a><span class="go">nikola build                run tasks</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-12"></a><span class="go">nikola check                check links and files in the generated site</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-13"></a><span class="go">nikola clean                clean action / remove targets</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-14"></a><span class="go">nikola console              start an interactive python console with access to</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-15"></a><span class="go">                            your site and configuration</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-16"></a><span class="go">nikola deploy               deploy the site</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-17"></a><span class="go">nikola dumpdb               dump dependency DB</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-18"></a><span class="go">nikola forget               clear successful run status from internal DB</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-19"></a><span class="go">nikola help                 show help</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-20"></a><span class="go">nikola ignore               ignore task (skip) on subsequent runs</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-21"></a><span class="go">nikola import_blogger       import a blogger dump</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-22"></a><span class="go">nikola import_feed          import a RSS/Atom dump</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-23"></a><span class="go">nikola import_wordpress     import a WordPress dump</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-24"></a><span class="go">nikola init                 create a Nikola site in the specified folder</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-25"></a><span class="go">nikola install_theme        install theme into current site</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-26"></a><span class="go">nikola list                 list tasks from dodo file</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-27"></a><span class="go">nikola mincss               apply mincss to the generated site</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-28"></a><span class="go">nikola new_post             create a new blog post or site page</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-29"></a><span class="go">nikola run                  run tasks</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-30"></a><span class="go">nikola serve                start the test webserver</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-31"></a><span class="go">nikola strace               use strace to list file_deps and targets</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-32"></a><span class="go">nikola version              print the Nikola version number</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-33"></a>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-34"></a><span class="go">nikola help                 show help / reference</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-35"></a><span class="go">nikola help &lt;command&gt;       show command usage</span>
-<a name="rest_code_6404cac06fb94d81b87010b38f0e24c5-36"></a><span class="go">nikola help &lt;task-name&gt;     show task usage</span>
+<pre class="code console"><a name="rest_code_fb363a79424e499bae6cfc348b868948-1"></a><span class="gp">$</span> nikola <span class="nb">help</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-2"></a><span class="go">Nikola is a tool to create static websites and blogs. For full documentation and more</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-3"></a><span class="go">information, please visit https://getnikola.com/</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-4"></a>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-5"></a>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-6"></a><span class="go">Available commands:</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-7"></a><span class="go">nikola auto                 automatically detect site changes, rebuild</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-8"></a><span class="go">                            and optionally refresh a browser</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-9"></a><span class="go">nikola bootswatch_theme     given a swatch name from bootswatch.com and a</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-10"></a><span class="go">                            parent theme, creates a custom theme</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-11"></a><span class="go">nikola build                run tasks</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-12"></a><span class="go">nikola check                check links and files in the generated site</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-13"></a><span class="go">nikola clean                clean action / remove targets</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-14"></a><span class="go">nikola console              start an interactive python console with access to</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-15"></a><span class="go">                            your site and configuration</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-16"></a><span class="go">nikola deploy               deploy the site</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-17"></a><span class="go">nikola dumpdb               dump dependency DB</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-18"></a><span class="go">nikola forget               clear successful run status from internal DB</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-19"></a><span class="go">nikola help                 show help</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-20"></a><span class="go">nikola ignore               ignore task (skip) on subsequent runs</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-21"></a><span class="go">nikola import_blogger       import a blogger dump</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-22"></a><span class="go">nikola import_feed          import a RSS/Atom dump</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-23"></a><span class="go">nikola import_wordpress     import a WordPress dump</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-24"></a><span class="go">nikola init                 create a Nikola site in the specified folder</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-25"></a><span class="go">nikola install_theme        install theme into current site</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-26"></a><span class="go">nikola list                 list tasks from dodo file</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-27"></a><span class="go">nikola mincss               apply mincss to the generated site</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-28"></a><span class="go">nikola new_post             create a new blog post or site page</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-29"></a><span class="go">nikola run                  run tasks</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-30"></a><span class="go">nikola serve                start the test webserver</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-31"></a><span class="go">nikola strace               use strace to list file_deps and targets</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-32"></a><span class="go">nikola version              print the Nikola version number</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-33"></a>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-34"></a><span class="go">nikola help                 show help / reference</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-35"></a><span class="go">nikola help &lt;command&gt;       show command usage</span>
+<a name="rest_code_fb363a79424e499bae6cfc348b868948-36"></a><span class="go">nikola help &lt;task-name&gt;     show task usage</span>
 </pre>
 <p>That will give you a list of all available commands in your version of Nikola.
 Each and every one of those is a plugin. Let's look at a typical example:</p>
 <p>First, the <tt class="docutils literal">serve.plugin</tt> file:</p>
-<pre class="code ini"><a name="rest_code_28cc8ffcc727458a83493345323593d8-1"></a><span class="k">[Core]</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">serve</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">serve</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-4"></a>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-5"></a><span class="k">[Documentation]</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
-<a name="rest_code_28cc8ffcc727458a83493345323593d8-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Start test server.</span>
+<pre class="code ini"><a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-1"></a><span class="k">[Core]</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">serve</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">serve</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-4"></a>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-5"></a><span class="k">[Documentation]</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
+<a name="rest_code_a9e043d41c1f4aad8cbe1f42bbf52ef3-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Start test server.</span>
 </pre>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -207,62 +204,62 @@ the docs for the Index</a>
 <p>For your own plugin, just change the values in a sensible way. The
 <tt class="docutils literal">Module</tt> will be used to find the matching Python module, in this case
 <tt class="docutils literal">serve.py</tt>, from which this is the interesting bit:</p>
-<pre class="code python"><a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-1"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Command</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-2"></a>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-3"></a><span class="c"># You have to inherit Command for this to be a</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-4"></a><span class="c"># command plugin:</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-5"></a>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-6"></a><span class="k">class</span> <span class="nc">CommandServe</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-7"></a>    <span class="sd">"""Start test server."""</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-8"></a>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-9"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"serve"</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-10"></a>    <span class="n">doc_usage</span> <span class="o">=</span> <span class="s">"[options]"</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-11"></a>    <span class="n">doc_purpose</span> <span class="o">=</span> <span class="s">"start the test webserver"</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-12"></a>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-13"></a>    <span class="n">cmd_options</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-14"></a>        <span class="p">{</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-15"></a>            <span class="s">'name'</span><span class="p">:</span> <span class="s">'port'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-16"></a>            <span class="s">'short'</span><span class="p">:</span> <span class="s">'p'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-17"></a>            <span class="s">'long'</span><span class="p">:</span> <span class="s">'port'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-18"></a>            <span class="s">'default'</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-19"></a>            <span class="s">'type'</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-20"></a>            <span class="s">'help'</span><span class="p">:</span> <span class="s">'Port nummber (default: 8000)'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-21"></a>        <span class="p">},</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-22"></a>        <span class="p">{</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-23"></a>            <span class="s">'name'</span><span class="p">:</span> <span class="s">'address'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-24"></a>            <span class="s">'short'</span><span class="p">:</span> <span class="s">'a'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-25"></a>            <span class="s">'long'</span><span class="p">:</span> <span class="s">'--address'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-26"></a>            <span class="s">'type'</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-27"></a>            <span class="s">'default'</span><span class="p">:</span> <span class="s">'127.0.0.1'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-28"></a>            <span class="s">'help'</span><span class="p">:</span> <span class="s">'Address to bind (default: 127.0.0.1)'</span><span class="p">,</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-29"></a>        <span class="p">},</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-30"></a>    <span class="p">)</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-31"></a>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-32"></a>    <span class="k">def</span> <span class="nf">_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-33"></a>        <span class="sd">"""Start test server."""</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-34"></a>        <span class="n">out_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'OUTPUT_FOLDER'</span><span class="p">]</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-35"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-36"></a>            <span class="k">print</span><span class="p">(</span><span class="s">"Error: Missing '{0}' folder?"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_dir</span><span class="p">))</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-37"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-38"></a>            <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">)</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-39"></a>            <span class="n">httpd</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">((</span><span class="n">options</span><span class="p">[</span><span class="s">'address'</span><span class="p">],</span> <span class="n">options</span><span class="p">[</span><span class="s">'port'</span><span class="p">]),</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-40"></a>                            <span class="n">OurHTTPRequestHandler</span><span class="p">)</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-41"></a>            <span class="n">sa</span> <span class="o">=</span> <span class="n">httpd</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-42"></a>            <span class="k">print</span><span class="p">(</span><span class="s">"Serving HTTP on"</span><span class="p">,</span> <span class="n">sa</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">"port"</span><span class="p">,</span> <span class="n">sa</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"..."</span><span class="p">)</span>
-<a name="rest_code_edd45f8a6cec4f17a50f2469cad043e1-43"></a>            <span class="n">httpd</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-1"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Command</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-2"></a>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-3"></a><span class="c"># You have to inherit Command for this to be a</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-4"></a><span class="c"># command plugin:</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-5"></a>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-6"></a><span class="k">class</span> <span class="nc">CommandServe</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-7"></a>    <span class="sd">"""Start test server."""</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-8"></a>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-9"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"serve"</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-10"></a>    <span class="n">doc_usage</span> <span class="o">=</span> <span class="s">"[options]"</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-11"></a>    <span class="n">doc_purpose</span> <span class="o">=</span> <span class="s">"start the test webserver"</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-12"></a>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-13"></a>    <span class="n">cmd_options</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-14"></a>        <span class="p">{</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-15"></a>            <span class="s">'name'</span><span class="p">:</span> <span class="s">'port'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-16"></a>            <span class="s">'short'</span><span class="p">:</span> <span class="s">'p'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-17"></a>            <span class="s">'long'</span><span class="p">:</span> <span class="s">'port'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-18"></a>            <span class="s">'default'</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-19"></a>            <span class="s">'type'</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-20"></a>            <span class="s">'help'</span><span class="p">:</span> <span class="s">'Port nummber (default: 8000)'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-21"></a>        <span class="p">},</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-22"></a>        <span class="p">{</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-23"></a>            <span class="s">'name'</span><span class="p">:</span> <span class="s">'address'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-24"></a>            <span class="s">'short'</span><span class="p">:</span> <span class="s">'a'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-25"></a>            <span class="s">'long'</span><span class="p">:</span> <span class="s">'--address'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-26"></a>            <span class="s">'type'</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-27"></a>            <span class="s">'default'</span><span class="p">:</span> <span class="s">'127.0.0.1'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-28"></a>            <span class="s">'help'</span><span class="p">:</span> <span class="s">'Address to bind (default: 127.0.0.1)'</span><span class="p">,</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-29"></a>        <span class="p">},</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-30"></a>    <span class="p">)</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-31"></a>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-32"></a>    <span class="k">def</span> <span class="nf">_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-33"></a>        <span class="sd">"""Start test server."""</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-34"></a>        <span class="n">out_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'OUTPUT_FOLDER'</span><span class="p">]</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-35"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-36"></a>            <span class="k">print</span><span class="p">(</span><span class="s">"Error: Missing '{0}' folder?"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_dir</span><span class="p">))</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-37"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-38"></a>            <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">)</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-39"></a>            <span class="n">httpd</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">((</span><span class="n">options</span><span class="p">[</span><span class="s">'address'</span><span class="p">],</span> <span class="n">options</span><span class="p">[</span><span class="s">'port'</span><span class="p">]),</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-40"></a>                            <span class="n">OurHTTPRequestHandler</span><span class="p">)</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-41"></a>            <span class="n">sa</span> <span class="o">=</span> <span class="n">httpd</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-42"></a>            <span class="k">print</span><span class="p">(</span><span class="s">"Serving HTTP on"</span><span class="p">,</span> <span class="n">sa</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">"port"</span><span class="p">,</span> <span class="n">sa</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"..."</span><span class="p">)</span>
+<a name="rest_code_a922c6ddb42c448eb6671733945a3e4a-43"></a>            <span class="n">httpd</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
 </pre>
 <p>As mentioned above, a plugin can have options, which the user can see by doing
 <tt class="docutils literal">nikola help command</tt> and can later use, for example:</p>
-<pre class="code console"><a name="rest_code_befe2da8721345d7a3a1571ec0590985-1"></a><span class="gp">$</span> nikola <span class="nb">help </span>serve
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-2"></a><span class="go">Purpose: start the test webserver</span>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-3"></a><span class="go">Usage:   nikola serve [options]</span>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-4"></a>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-5"></a><span class="go">Options:</span>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-6"></a><span class="go">-p ARG, --port=ARG        Port nummber (default: 8000)</span>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-7"></a><span class="go">-a ARG, ----address=ARG   Address to bind (default: 127.0.0.1)</span>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-8"></a>
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-9"></a><span class="gp">$</span> nikola serve -p 9000
-<a name="rest_code_befe2da8721345d7a3a1571ec0590985-10"></a><span class="go">Serving HTTP on 127.0.0.1 port 9000 ...</span>
+<pre class="code console"><a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-1"></a><span class="gp">$</span> nikola <span class="nb">help </span>serve
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-2"></a><span class="go">Purpose: start the test webserver</span>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-3"></a><span class="go">Usage:   nikola serve [options]</span>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-4"></a>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-5"></a><span class="go">Options:</span>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-6"></a><span class="go">-p ARG, --port=ARG        Port nummber (default: 8000)</span>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-7"></a><span class="go">-a ARG, ----address=ARG   Address to bind (default: 127.0.0.1)</span>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-8"></a>
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-9"></a><span class="gp">$</span> nikola serve -p 9000
+<a name="rest_code_abcfff7cf5a64b2d9b9d898f03039874-10"></a><span class="go">Serving HTTP on 127.0.0.1 port 9000 ...</span>
 </pre>
 <p>So, what can you do with commands? Well, anything you want, really. I have implemented
 a sort of planet using it. So, be creative, and if you do something interesting,
@@ -273,15 +270,15 @@ let me know ;-)</p>
 <p>Nikola supports Mako and Jinja2. If you prefer some other templating
 system, then you will have to write a TemplateSystem plugin. Here's how they work.
 First, you have to create a .plugin file. Here's the one for the Mako plugin:</p>
-<pre class="code ini"><a name="rest_code_edb899e54d824856a9194d3f5ae242ad-1"></a><span class="k">[Core]</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">mako</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">mako</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-4"></a>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-5"></a><span class="k">[Documentation]</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
-<a name="rest_code_edb899e54d824856a9194d3f5ae242ad-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Support for Mako templates.</span>
+<pre class="code ini"><a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-1"></a><span class="k">[Core]</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">mako</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">mako</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-4"></a>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-5"></a><span class="k">[Documentation]</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
+<a name="rest_code_f002dc2bf1174d99a7da11d7711754f9-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Support for Mako templates.</span>
 </pre>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -293,52 +290,52 @@ the docs for the Index</a>
 in the obvious ways.</p>
 <p>The "Module" option is the name of the module, which has to look something like this,
 a stub for a hypothetical system called "Templater":</p>
-<pre class="code python"><a name="rest_code_b204de1444504968beeb3f8a199627bd-1"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">TemplateSystem</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-2"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-3"></a><span class="c"># You have to inherit TemplateSystem</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-4"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-5"></a><span class="k">class</span> <span class="nc">TemplaterTemplates</span><span class="p">(</span><span class="n">TemplateSystem</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-6"></a>    <span class="sd">"""Wrapper for Templater templates."""</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-7"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-8"></a>    <span class="c"># name has to match Name in the .plugin file</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-9"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"templater"</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-10"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-11"></a>    <span class="c"># A list of directories where the templates will be</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-12"></a>    <span class="c"># located. Most template systems have some sort of</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-13"></a>    <span class="c"># template loading tool that can use this.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-14"></a>    <span class="k">def</span> <span class="nf">set_directories</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directories</span><span class="p">,</span> <span class="n">cache_folder</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-15"></a>        <span class="sd">"""Sets the list of folders where templates are located and cache."""</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-16"></a>        <span class="k">pass</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-17"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-18"></a>    <span class="c"># You *must* implement this, even if to return []</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-19"></a>    <span class="c"># It should return a list of all the files that,</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-20"></a>    <span class="c"># when changed, may affect the template's output.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-21"></a>    <span class="c"># usually this involves template inheritance and</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-22"></a>    <span class="c"># inclusion.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-23"></a>    <span class="k">def</span> <span class="nf">template_deps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_name</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-24"></a>        <span class="sd">"""Returns filenames which are dependencies for a template."""</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-25"></a>        <span class="k">return</span> <span class="p">[]</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-26"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-27"></a>    <span class="k">def</span> <span class="nf">render_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_name</span><span class="p">,</span> <span class="n">output_name</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-28"></a>        <span class="sd">"""Renders template to a file using context.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-29"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-30"></a><span class="sd">        This must save the data to output_name *and* return it</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-31"></a><span class="sd">        so that the caller may do additional processing.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-32"></a><span class="sd">        """</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-33"></a>        <span class="k">pass</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-34"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-35"></a>    <span class="c"># The method that does the actual rendering.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-36"></a>    <span class="c"># template_name is the name of the template file,</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-37"></a>    <span class="c"># context is a dictionary containing the data the template</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-38"></a>    <span class="c"># uses for rendering.</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-39"></a>    <span class="k">def</span> <span class="nf">render_template_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-40"></a>        <span class="sd">"""Renders template to a string using context. """</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-41"></a>        <span class="k">pass</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-42"></a>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-43"></a>    <span class="k">def</span> <span class="nf">inject_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-44"></a>        <span class="sd">"""Injects the directory with the lowest priority in the</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-45"></a><span class="sd">        template search mechanism."""</span>
-<a name="rest_code_b204de1444504968beeb3f8a199627bd-46"></a>        <span class="k">pass</span>
+<pre class="code python"><a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-1"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">TemplateSystem</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-2"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-3"></a><span class="c"># You have to inherit TemplateSystem</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-4"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-5"></a><span class="k">class</span> <span class="nc">TemplaterTemplates</span><span class="p">(</span><span class="n">TemplateSystem</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-6"></a>    <span class="sd">"""Wrapper for Templater templates."""</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-7"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-8"></a>    <span class="c"># name has to match Name in the .plugin file</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-9"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"templater"</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-10"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-11"></a>    <span class="c"># A list of directories where the templates will be</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-12"></a>    <span class="c"># located. Most template systems have some sort of</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-13"></a>    <span class="c"># template loading tool that can use this.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-14"></a>    <span class="k">def</span> <span class="nf">set_directories</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directories</span><span class="p">,</span> <span class="n">cache_folder</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-15"></a>        <span class="sd">"""Sets the list of folders where templates are located and cache."""</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-16"></a>        <span class="k">pass</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-17"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-18"></a>    <span class="c"># You *must* implement this, even if to return []</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-19"></a>    <span class="c"># It should return a list of all the files that,</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-20"></a>    <span class="c"># when changed, may affect the template's output.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-21"></a>    <span class="c"># usually this involves template inheritance and</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-22"></a>    <span class="c"># inclusion.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-23"></a>    <span class="k">def</span> <span class="nf">template_deps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_name</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-24"></a>        <span class="sd">"""Returns filenames which are dependencies for a template."""</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-25"></a>        <span class="k">return</span> <span class="p">[]</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-26"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-27"></a>    <span class="k">def</span> <span class="nf">render_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_name</span><span class="p">,</span> <span class="n">output_name</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-28"></a>        <span class="sd">"""Renders template to a file using context.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-29"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-30"></a><span class="sd">        This must save the data to output_name *and* return it</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-31"></a><span class="sd">        so that the caller may do additional processing.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-32"></a><span class="sd">        """</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-33"></a>        <span class="k">pass</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-34"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-35"></a>    <span class="c"># The method that does the actual rendering.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-36"></a>    <span class="c"># template_name is the name of the template file,</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-37"></a>    <span class="c"># context is a dictionary containing the data the template</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-38"></a>    <span class="c"># uses for rendering.</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-39"></a>    <span class="k">def</span> <span class="nf">render_template_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-40"></a>        <span class="sd">"""Renders template to a string using context. """</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-41"></a>        <span class="k">pass</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-42"></a>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-43"></a>    <span class="k">def</span> <span class="nf">inject_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-44"></a>        <span class="sd">"""Injects the directory with the lowest priority in the</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-45"></a><span class="sd">        template search mechanism."""</span>
+<a name="rest_code_500a7636a09f498fa5a0ff6df01d5c72-46"></a>        <span class="k">pass</span>
 </pre>
 <p>You can see a real example in <a class="reference external" href="https://github.com/getnikola/nikola/blob/master/nikola/plugins/template/jinja.py">the Jinja plugin</a></p>
 </div>
@@ -354,26 +351,26 @@ T
 There are also <tt class="docutils literal">LateTask</tt> plugins, which are executed later,
 and <tt class="docutils literal">TaskMultiplier</tt> plugins that take a task and create
 more tasks out of it.</blockquote>
-<pre class="code console"><a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-1"></a><span class="gp">$</span> nikola list
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-2"></a><span class="go">Scanning posts....done!</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-3"></a><span class="go">build_bundles</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-4"></a><span class="go">build_less</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-5"></a><span class="go">copy_assets</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-6"></a><span class="go">copy_files</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-7"></a><span class="go">post_render</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-8"></a><span class="go">redirect</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-9"></a><span class="go">render_archive</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-10"></a><span class="go">render_galleries</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-11"></a><span class="go">render_galleries_clean</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-12"></a><span class="go">render_indexes</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-13"></a><span class="go">render_listings</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-14"></a><span class="go">render_pages</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-15"></a><span class="go">render_posts</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-16"></a><span class="go">render_rss</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-17"></a><span class="go">render_site</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-18"></a><span class="go">render_sources</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-19"></a><span class="go">render_tags</span>
-<a name="rest_code_ccc0b4edcdb648228771d9f34ab3e835-20"></a><span class="go">sitemap</span>
+<pre class="code console"><a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-1"></a><span class="gp">$</span> nikola list
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-2"></a><span class="go">Scanning posts....done!</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-3"></a><span class="go">build_bundles</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-4"></a><span class="go">build_less</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-5"></a><span class="go">copy_assets</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-6"></a><span class="go">copy_files</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-7"></a><span class="go">post_render</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-8"></a><span class="go">redirect</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-9"></a><span class="go">render_archive</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-10"></a><span class="go">render_galleries</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-11"></a><span class="go">render_galleries_clean</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-12"></a><span class="go">render_indexes</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-13"></a><span class="go">render_listings</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-14"></a><span class="go">render_pages</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-15"></a><span class="go">render_posts</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-16"></a><span class="go">render_rss</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-17"></a><span class="go">render_site</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-18"></a><span class="go">render_sources</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-19"></a><span class="go">render_tags</span>
+<a name="rest_code_14778efa01114e3eaaf9487d8aa376d9-20"></a><span class="go">sitemap</span>
 </pre>
 <p>These have access to the <tt class="docutils literal">site</tt> object which contains your timeline and
 your configuration.</p>
@@ -383,15 +380,15 @@ your configuration.</p>
 document, so I'll just leave you with an example, the <tt class="docutils literal">copy_assets</tt> task.
 First the <tt class="docutils literal">task_copy_assets.plugin</tt> file, which you should copy and edit
 in the logical ways:</p>
-<pre class="code ini"><a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-1"></a><span class="k">[Core]</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">copy_assets</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">task_copy_assets</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-4"></a>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-5"></a><span class="k">[Documentation]</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
-<a name="rest_code_38e87f88cbe343dba963d3b3a4353e0f-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Copy theme assets into output.</span>
+<pre class="code ini"><a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-1"></a><span class="k">[Core]</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-2"></a><span class="na">Name</span> <span class="o">=</span> <span class="s">copy_assets</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-3"></a><span class="na">Module</span> <span class="o">=</span> <span class="s">task_copy_assets</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-4"></a>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-5"></a><span class="k">[Documentation]</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-6"></a><span class="na">Author</span> <span class="o">=</span> <span class="s">Roberto Alsina</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-7"></a><span class="na">Version</span> <span class="o">=</span> <span class="s">0.1</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-8"></a><span class="na">Website</span> <span class="o">=</span> <span class="s">https://getnikola.com</span>
+<a name="rest_code_8e8a623ffd0d4c8fbae49a227aba6ba6-9"></a><span class="na">Description</span> <span class="o">=</span> <span class="s">Copy theme assets into output.</span>
 </pre>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -400,49 +397,49 @@ the docs for the Index</a>
 (and the .plugin file examples and explanations).</p>
 </div>
 <p>And the <tt class="docutils literal">task_copy_assets.py</tt> file, in its entirety:</p>
-<pre class="code python"><a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-1"></a><span class="kn">import</span> <span class="nn">os</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-2"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-3"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-4"></a><span class="kn">from</span> <span class="nn">nikola</span> <span class="kn">import</span> <span class="n">utils</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-5"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-6"></a><span class="c"># Have to inherit Task to be a task plugin</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-7"></a><span class="k">class</span> <span class="nc">CopyAssets</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-8"></a>    <span class="sd">"""Copy theme assets into output."""</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-9"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"copy_assets"</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-11"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-12"></a>    <span class="c"># This yields the tasks</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-13"></a>    <span class="k">def</span> <span class="nf">gen_tasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-14"></a>        <span class="sd">"""Create tasks to copy the assets of the whole theme chain.</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-15"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-16"></a><span class="sd">        If a file is present on two themes, use the version</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-17"></a><span class="sd">        from the "youngest" theme.</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-18"></a><span class="sd">        """</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-19"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-20"></a>        <span class="c"># I put all the configurations and data the plugin uses</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-21"></a>        <span class="c"># in a dictionary because utils.config_changed will</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-22"></a>        <span class="c"># make it so that if these change, this task will be</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-23"></a>        <span class="c"># marked out of date, and run again.</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-24"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-25"></a>        <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-26"></a>            <span class="s">"themes"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">THEMES</span><span class="p">,</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-27"></a>            <span class="s">"output_folder"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'OUTPUT_FOLDER'</span><span class="p">],</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-28"></a>            <span class="s">"filters"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'FILTERS'</span><span class="p">],</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-29"></a>        <span class="p">}</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-30"></a>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-31"></a>        <span class="n">tasks</span> <span class="o">=</span> <span class="p">{}</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-32"></a>        <span class="k">for</span> <span class="n">theme_name</span> <span class="ow">in</span> <span class="n">kw</span><span class="p">[</span><span class="s">'themes'</span><span class="p">]:</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-33"></a>            <span class="n">src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">get_theme_path</span><span class="p">(</span><span class="n">theme_name</span><span class="p">),</span> <span class="s">'assets'</span><span class="p">)</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-34"></a>            <span class="n">dst</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kw</span><span class="p">[</span><span class="s">'output_folder'</span><span class="p">],</span> <span class="s">'assets'</span><span class="p">)</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-35"></a>            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">utils</span><span class="o">.</span><span class="n">copy_tree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-36"></a>                <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-37"></a>                    <span class="k">continue</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-38"></a>                <span class="n">tasks</span><span class="p">[</span><span class="n">task</span><span class="p">[</span><span class="s">'name'</span><span class="p">]]</span> <span class="o">=</span> <span class="n">task</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-39"></a>                <span class="n">task</span><span class="p">[</span><span class="s">'uptodate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'uptodate'</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> \
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-40"></a>                    <span class="p">[</span><span class="n">utils</span><span class="o">.</span><span class="n">config_changed</span><span class="p">(</span><span class="n">kw</span><span class="p">)]</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-41"></a>                <span class="n">task</span><span class="p">[</span><span class="s">'basename'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-42"></a>                <span class="c"># If your task generates files, please do this.</span>
-<a name="rest_code_f3c9c6ba5191437ba43b9ef99f476de9-43"></a>                <span class="k">yield</span> <span class="n">utils</span><span class="o">.</span><span class="n">apply_filters</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">kw</span><span class="p">[</span><span class="s">'filters'</span><span class="p">])</span>
+<pre class="code python"><a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-1"></a><span class="kn">import</span> <span class="nn">os</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-2"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-3"></a><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-4"></a><span class="kn">from</span> <span class="nn">nikola</span> <span class="kn">import</span> <span class="n">utils</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-5"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-6"></a><span class="c"># Have to inherit Task to be a task plugin</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-7"></a><span class="k">class</span> <span class="nc">CopyAssets</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-8"></a>    <span class="sd">"""Copy theme assets into output."""</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-9"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s">"copy_assets"</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-11"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-12"></a>    <span class="c"># This yields the tasks</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-13"></a>    <span class="k">def</span> <span class="nf">gen_tasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-14"></a>        <span class="sd">"""Create tasks to copy the assets of the whole theme chain.</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-15"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-16"></a><span class="sd">        If a file is present on two themes, use the version</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-17"></a><span class="sd">        from the "youngest" theme.</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-18"></a><span class="sd">        """</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-19"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-20"></a>        <span class="c"># I put all the configurations and data the plugin uses</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-21"></a>        <span class="c"># in a dictionary because utils.config_changed will</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-22"></a>        <span class="c"># make it so that if these change, this task will be</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-23"></a>        <span class="c"># marked out of date, and run again.</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-24"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-25"></a>        <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-26"></a>            <span class="s">"themes"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">THEMES</span><span class="p">,</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-27"></a>            <span class="s">"output_folder"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'OUTPUT_FOLDER'</span><span class="p">],</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-28"></a>            <span class="s">"filters"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'FILTERS'</span><span class="p">],</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-29"></a>        <span class="p">}</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-30"></a>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-31"></a>        <span class="n">tasks</span> <span class="o">=</span> <span class="p">{}</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-32"></a>        <span class="k">for</span> <span class="n">theme_name</span> <span class="ow">in</span> <span class="n">kw</span><span class="p">[</span><span class="s">'themes'</span><span class="p">]:</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-33"></a>            <span class="n">src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">get_theme_path</span><span class="p">(</span><span class="n">theme_name</span><span class="p">),</span> <span class="s">'assets'</span><span class="p">)</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-34"></a>            <span class="n">dst</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kw</span><span class="p">[</span><span class="s">'output_folder'</span><span class="p">],</span> <span class="s">'assets'</span><span class="p">)</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-35"></a>            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">utils</span><span class="o">.</span><span class="n">copy_tree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-36"></a>                <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-37"></a>                    <span class="k">continue</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-38"></a>                <span class="n">tasks</span><span class="p">[</span><span class="n">task</span><span class="p">[</span><span class="s">'name'</span><span class="p">]]</span> <span class="o">=</span> <span class="n">task</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-39"></a>                <span class="n">task</span><span class="p">[</span><span class="s">'uptodate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'uptodate'</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> \
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-40"></a>                    <span class="p">[</span><span class="n">utils</span><span class="o">.</span><span class="n">config_changed</span><span class="p">(</span><span class="n">kw</span><span class="p">)]</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-41"></a>                <span class="n">task</span><span class="p">[</span><span class="s">'basename'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-42"></a>                <span class="c"># If your task generates files, please do this.</span>
+<a name="rest_code_002309a5bb2c4d9daa1e46c9ea519e05-43"></a>                <span class="k">yield</span> <span class="n">utils</span><span class="o">.</span><span class="n">apply_filters</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">kw</span><span class="p">[</span><span class="s">'filters'</span><span class="p">])</span>
 </pre>
 </div>
 <div class="section" id="pagecompiler-plugins">
@@ -466,7 +463,7 @@ metadata contained in the file.</p>
 <h3><a class="toc-backref" href=".#id6">RestExtension Plugins</a></h3>
 <p>Implement directives for reStructuredText, see <a class="reference external" href="https://github.com/getnikola/nikola/blob/master/nikola/plugins/compile/rest/media.py">media.py</a> for a simple example.</p>
 <p>If your output depends on a config value, you need to make your post record a dependency on a pseudo-path, like this:</p>
-<pre class="code text"><a name="rest_code_fcc217d5444e40c8bd3a3df623d8b373-1"></a>####MAGIC####CONFIG:OPTIONNAME
+<pre class="code text"><a name="rest_code_5f92672f75c94da5b842708afdd2f8e7-1"></a>####MAGIC####CONFIG:OPTIONNAME
 </pre>
 <p>Then, whenever the <tt class="docutils literal">OPTIONNAME</tt> option is changed in conf.py, the file will be rebuilt.</p>
 <p>If your directive depends or may depend on the whole timeline (like the post-list directive, where adding new posts
@@ -548,15 +545,15 @@ can access them via _link.</p>
 <p>For example, you can always get a link to the path for the feed of the "foo" tag
 by using <tt class="docutils literal"><span class="pre">_link('tag_rss',</span> 'foo')</tt> or the <tt class="docutils literal"><span class="pre">link://tag_rss/foo</span></tt> URL.</p>
 <p>Here's the relevant code from the tag plugin.</p>
-<pre class="code python"><a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-1"></a><span class="c"># In set_site</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-2"></a><span class="n">site</span><span class="o">.</span><span class="n">register_path_handler</span><span class="p">(</span><span class="s">'tag_rss'</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag_rss_path</span><span class="p">)</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-3"></a>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-4"></a><span class="c"># And these always take name and lang as arguments and returl a list of</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-5"></a><span class="c"># path elements.</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-6"></a><span class="k">def</span> <span class="nf">tag_rss_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">lang</span><span class="p">):</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-7"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">_f</span> <span class="k">for</span> <span class="n">_f</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'TRANSLATIONS'</span><span class="p">][</span><span class="n">lang</span><span class="p">],</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-8"></a>                          <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'TAG_PATH'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">slugify_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="s">".xml"</span><span class="p">]</span> <span class="k">if</span>
-<a name="rest_code_bd26c1c0d77f487e9fcaf602be2a8c39-9"></a>            <span class="n">_f</span><span class="p">]</span>
+<pre class="code python"><a name="rest_code_68520b46483e4b7c870138b95fb794ba-1"></a><span class="c"># In set_site</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-2"></a><span class="n">site</span><span class="o">.</span><span class="n">register_path_handler</span><span class="p">(</span><span class="s">'tag_rss'</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag_rss_path</span><span class="p">)</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-3"></a>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-4"></a><span class="c"># And these always take name and lang as arguments and returl a list of</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-5"></a><span class="c"># path elements.</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-6"></a><span class="k">def</span> <span class="nf">tag_rss_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">lang</span><span class="p">):</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-7"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">_f</span> <span class="k">for</span> <span class="n">_f</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'TRANSLATIONS'</span><span class="p">][</span><span class="n">lang</span><span class="p">],</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-8"></a>                          <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'TAG_PATH'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">slugify_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="s">".xml"</span><span class="p">]</span> <span class="k">if</span>
+<a name="rest_code_68520b46483e4b7c870138b95fb794ba-9"></a>            <span class="n">_f</span><span class="p">]</span>
 </pre>
 </div>
 <div class="section" id="template-hooks">
@@ -575,34 +572,34 @@ it, a plugin must register itself.  The following hooks currently exist:</p>
 <li><tt class="docutils literal">page_footer</tt></li>
 </ul>
 <p>For example, in order to register a script into <tt class="docutils literal">extra_head</tt>:</p>
-<pre class="code python"><a name="rest_code_711e31e56e8048c1ad78029fedd81303-1"></a><span class="c"># In set_site</span>
-<a name="rest_code_711e31e56e8048c1ad78029fedd81303-2"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&lt;script src="/assets/js/fancyplugin.js"&gt;'</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_ee9946965e6a4f109a6dd0043ab30b0b-1"></a><span class="c"># In set_site</span>
+<a name="rest_code_ee9946965e6a4f109a6dd0043ab30b0b-2"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&lt;script src="/assets/js/fancyplugin.js"&gt;'</span><span class="p">)</span>
 </pre>
 <p>There is also another API available.  It allows use of dynamically generated
 HTML:</p>
-<pre class="code python"><a name="rest_code_ddafc242f38d403181275fdb27aed7cf-1"></a><span class="c"># In set_site</span>
-<a name="rest_code_ddafc242f38d403181275fdb27aed7cf-2"></a><span class="k">def</span> <span class="nf">generate_html_bit</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s">'js'</span><span class="p">):</span>
-<a name="rest_code_ddafc242f38d403181275fdb27aed7cf-3"></a>    <span class="k">return</span> <span class="s">'&lt;script src="/assets/{t}/{n}.{t}"&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">ftype</span><span class="p">)</span>
-<a name="rest_code_ddafc242f38d403181275fdb27aed7cf-4"></a>
-<a name="rest_code_ddafc242f38d403181275fdb27aed7cf-5"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">generate_html_bit</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">'fancyplugin'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">'js'</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_667560950d4a480ca7b92d79f5dab4cc-1"></a><span class="c"># In set_site</span>
+<a name="rest_code_667560950d4a480ca7b92d79f5dab4cc-2"></a><span class="k">def</span> <span class="nf">generate_html_bit</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s">'js'</span><span class="p">):</span>
+<a name="rest_code_667560950d4a480ca7b92d79f5dab4cc-3"></a>    <span class="k">return</span> <span class="s">'&lt;script src="/assets/{t}/{n}.{t}"&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">ftype</span><span class="p">)</span>
+<a name="rest_code_667560950d4a480ca7b92d79f5dab4cc-4"></a>
+<a name="rest_code_667560950d4a480ca7b92d79f5dab4cc-5"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'extra_head'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">generate_html_bit</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">'fancyplugin'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">'js'</span><span class="p">)</span>
 </pre>
 <p>The second argument to <tt class="docutils literal">append()</tt> is used to determine whether the function
 needs access to the current template context and the site.  If it it set to
 <tt class="docutils literal">True</tt>, the function will also receive <tt class="docutils literal">site</tt> and <tt class="docutils literal">context</tt> keyword
 arguments.  Example use:</p>
-<pre class="code python"><a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-1"></a><span class="c"># In set_site</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-2"></a><span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">endswith</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-3"></a>    <span class="k">if</span> <span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'en'</span><span class="p">:</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-4"></a>        <span class="n">greet</span> <span class="o">=</span> <span class="s">u'Hello'</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-5"></a>    <span class="k">elif</span> <span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'es'</span><span class="p">:</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-6"></a>        <span class="n">greet</span> <span class="o">=</span> <span class="s">u'¡Hola'</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-7"></a>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-8"></a>    <span class="n">t</span> <span class="o">=</span> <span class="s">u' BLOG_TITLE = {0}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'BLOG_TITLE'</span><span class="p">](</span><span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]))</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-9"></a>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-10"></a>    <span class="k">return</span> <span class="s">u'&lt;h3&gt;{greet} {addr}{endswith}&lt;/h3&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">greet</span><span class="o">=</span><span class="n">greet</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="n">addr</span><span class="p">,</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-11"></a>    <span class="n">endswith</span><span class="o">=</span><span class="n">endswith</span><span class="p">)</span> <span class="o">+</span> <span class="n">t</span>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-12"></a>
-<a name="rest_code_69fd905c455b4b45ad284baf7dd7af73-13"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'page_header'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">greeting</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="s">u'Nikola Tesla'</span><span class="p">,</span> <span class="n">endswith</span><span class="o">=</span><span class="s">u'!'</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-1"></a><span class="c"># In set_site</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-2"></a><span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">endswith</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-3"></a>    <span class="k">if</span> <span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'en'</span><span class="p">:</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-4"></a>        <span class="n">greet</span> <span class="o">=</span> <span class="s">u'Hello'</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-5"></a>    <span class="k">elif</span> <span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'es'</span><span class="p">:</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-6"></a>        <span class="n">greet</span> <span class="o">=</span> <span class="s">u'¡Hola'</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-7"></a>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-8"></a>    <span class="n">t</span> <span class="o">=</span> <span class="s">u' BLOG_TITLE = {0}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'BLOG_TITLE'</span><span class="p">](</span><span class="n">context</span><span class="p">[</span><span class="s">'lang'</span><span class="p">]))</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-9"></a>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-10"></a>    <span class="k">return</span> <span class="s">u'&lt;h3&gt;{greet} {addr}{endswith}&lt;/h3&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">greet</span><span class="o">=</span><span class="n">greet</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="n">addr</span><span class="p">,</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-11"></a>    <span class="n">endswith</span><span class="o">=</span><span class="n">endswith</span><span class="p">)</span> <span class="o">+</span> <span class="n">t</span>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-12"></a>
+<a name="rest_code_2bfea72396f24a398336ae1ae9c12fd2-13"></a><span class="n">site</span><span class="o">.</span><span class="n">template_hooks</span><span class="p">[</span><span class="s">'page_header'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">greeting</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="s">u'Nikola Tesla'</span><span class="p">,</span> <span class="n">endswith</span><span class="o">=</span><span class="s">u'!'</span><span class="p">)</span>
 </pre>
 </div>
 </div>

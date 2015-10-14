@@ -23,7 +23,7 @@ A very special guest for OSD 2015.
 Aaron Gable
 -----------
 
-Aaron Gable finished Bachelor studies at Harvey Mudd College and works at Google as Software Engineer.
+Aaron Gable received his Bachelors in computer science and math from Harvey Mudd College in 2012, and now works on developer infrastructure and for the open source Chromium projects at Google.
 
 Neetu Jain
 ----------
